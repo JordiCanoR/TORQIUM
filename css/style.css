@@ -116,7 +116,7 @@ body {
   }
 }
 body.fondo-secundario {
-  background-image: url("../imagenes/fondometal.jpg");
+  background-image: url("imagenes/fondometal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
