@@ -115,16 +115,18 @@ body {
     bottom: 20px;
   }
 }
-body.fondo-secundario {
+  body.fondo-secundario {
   background-image: url("imagenes/fondometal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  padding: 20px; /* nuevo */
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .contenido-secundario {
   text-align: center;
