@@ -1,166 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* General */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #222;
     position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
     content: "";
-    background: url('imagenes/logo.png') no-repeat center center;
-    background-size: 50%;
+    background: url("imagenes/logo.png") center center no-repeat;
+    background-size: 40%;
+    opacity: 0.06;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.05;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #121212;
-    color: #f4f4f4;
-}
-
-.dark-mode header,
-.dark-mode footer {
-    background-color: #1f1f1f;
-    color: white;
-}
-
-/* Header */
 header {
     text-align: center;
-    background-color: #003366;
-    color: white;
-    padding: 2rem 1rem;
-    position: relative;
-    z-index: 1;
+    padding: 40px 20px 10px;
 }
 
 .logo {
-    width: 150px;
-    margin-bottom: 1rem;
+    width: 140px;
+    transition: transform 0.5s ease;
 }
 
-.logo.animado {
-    animation: float 6s ease-in-out infinite;
+.logo.animado:hover {
+    transform: scale(1.1) rotate(2deg);
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+h1 {
+    font-size: 2.5em;
+    margin: 0.3em 0 0.2em;
+    color: #003d99;
 }
 
-/* Slogan */
 .slogan {
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    color: #444;
 }
 
-/* Nav */
 nav {
     display: flex;
     justify-content: center;
-    background: #005a9c;
-    padding: 0.5rem;
-    gap: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 2;
+    gap: 20px;
+    background: #003d99;
+    padding: 12px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #ffd700;
 }
 
-/* Main */
 main {
-    padding: 2rem;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .card {
     background: white;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    z-index: 1;
-    position: relative;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease;
 }
 
-/* Formulario */
+.card h2 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    color: #222;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 15px;
 }
 
-input, textarea {
-    padding: 0.8rem;
+form input, form textarea {
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
+    border-radius: 8px;
+    font-size: 1em;
 }
 
-button {
-    background-color: #003366;
+form button {
+    padding: 12px;
+    background: #003d99;
     color: white;
     border: none;
-    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1em;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-button:hover {
-    background-color: #005a9c;
+form button:hover {
+    background: #0050cc;
 }
 
-/* Footer */
 footer {
-    background: #003366;
-    color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 30px 10px;
+    font-size: 0.9em;
+    background: #e6e6e6;
+    margin-top: 30px;
 }
 
-/* Botón modo oscuro */
 .toggle-dark-mode {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 3;
-    padding: 0.6rem 1rem;
-    background: #222;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    background: #444;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
 }
 
-/* Botón scroll to top */
+.toggle-dark-mode:hover {
+    background: #222;
+}
+
 #toTopBtn {
-    display: none;
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 3;
-    padding: 0.6rem;
-    background: #003366;
-    color: white;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    padding: 10px 14px;
+    font-size: 20px;
     border: none;
+    background-color: #003d99;
+    color: white;
     border-radius: 50%;
-    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+#toTopBtn:hover {
+    transform: scale(1.1);
+}
+
+/* Animación suave al aparecer */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+    background: #111;
+    color: #ddd;
+}
+
+body.dark-mode .card {
+    background: #1e1e1e;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode nav {
+    background: #222;
+}
+
+body.dark-mode nav a {
+    color: #eee;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #222;
+    border: 1px solid #555;
+    color: white;
+}
+
+body.dark-mode form button {
+    background: #0055cc;
+}
+
+body.dark-mode footer {
+    background: #1a1a1a;
+    color: #aaa;
 }
