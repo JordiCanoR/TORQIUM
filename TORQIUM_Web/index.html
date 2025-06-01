@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TORQIUM | Instalaciones y Automatización</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌓 Modo Oscuro</button>
+
     <header>
-        <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo" />
+        <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo animado" />
         <h1>TORQIUM</h1>
         <p class="slogan">Energía e inteligencia para tu hogar y tu negocio</p>
     </header>
@@ -23,7 +26,7 @@
 
     <main>
         <section id="sobre" class="card">
-            <h2>¿Quiénes somos? / About Us</h2>
+            <h2><i data-lucide="user"></i> ¿Quiénes somos? / About Us</h2>
             <p><strong>TORQIUM</strong> es una empresa técnica liderada por Jordi, técnico especialista en automatización y electricidad.</p>
             <p><strong>TORQIUM</strong> is a technical company led by Jordi, a specialist in automation and electrical installations.</p>
             <p>Nos dedicamos a ofrecer automatizaciones inteligentes no industriales y servicios eléctricos profesionales.</p>
@@ -31,35 +34,65 @@
         </section>
 
         <section id="servicios" class="card">
-            <h2>Servicios / Services</h2>
+            <h2><i data-lucide="wrench"></i> Servicios / Services</h2>
             <ul>
-                <li>🔌 Instalaciones eléctricas en viviendas y comercios / Electrical installations (residential and commercial)</li>
-                <li>👨‍💻 Programación de PLC Siemens / Siemens PLC programming</li>
+                <li>🔌 Instalaciones eléctricas en viviendas y comercios / Electrical installations</li>
+                <li>🧠 Programación de PLC Siemens / Siemens PLC programming</li>
                 <li>💡 Automatización de luces, bombas, portones… / Lighting, gate, pump automation</li>
-                <li>🏠 Domótica y eficiencia energética / Smart home integration and energy efficiency</li>
-                <li>🧰 Mantenimiento eléctrico general / General electrical maintenance</li>
+                <li>🏠 Domótica y eficiencia energética / Smart home & energy efficiency</li>
+                <li>🛠️ Mantenimiento eléctrico general / General electrical maintenance</li>
             </ul>
         </section>
 
         <section id="tecnologias" class="card">
-            <h2>🧰 Tecnologías / Technologies</h2>
+            <h2><i data-lucide="cpu"></i> Tecnologías / Technologies</h2>
             <ul>
                 <li>Siemens S7-1200 / TIA Portal</li>
-                <li>Automatización doméstica y esquemas eléctricos / Home automation & electrical schematics</li>
-                <li>SCADA/HMI y control desde la web / Web-based control panels</li>
-                <li>Instalaciones conforme normativa vigente / Certified standard-compliant installations</li>
+                <li>Automatización doméstica y esquemas eléctricos</li>
+                <li>SCADA/HMI y control desde la web</li>
+                <li>Instalaciones conforme normativa vigente</li>
             </ul>
         </section>
 
         <section id="contacto" class="card contacto">
-            <h2>📬 Contacto / Contact</h2>
+            <h2><i data-lucide="mail"></i> 📬 Contacto / Contact</h2>
+            <form action="https://formsubmit.co/torquium@ejemplo.com" method="POST">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
             <ul>
                 <li>📧 Email: <a href="mailto:torquium@ejemplo.com">torquium@ejemplo.com</a></li>
-                <li>📱 Teléfono / Phone: <a href="tel:+34607951520">607 951 520</a></li>
-                <li>🌐 Web: <a href="https://jordicanor.github.io/TORQIUM" target="_blank">https://jordicanor.github.io/TORQIUM</a></li>
+                <li>📱 Teléfono: <a href="tel:+34607951520">607 951 520</a></li>
+                <li>🌐 Web: <a href="https://jordicanor.github.io/TORQIUM" target="_blank">jordicanor.github.io/TORQIUM</a></li>
             </ul>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; <span id="year"></span> TORQIUM - Todos los derechos reservados</p>
+    </footer>
+
+    <button id="toTopBtn" onclick="scrollToTop()">⬆</button>
+
+    <script>
+        lucide.createIcons();
+
+        window.onscroll = function () {
+            const btn = document.getElementById("toTopBtn");
+            btn.style.display = window.scrollY > 200 ? "block" : "none";
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
