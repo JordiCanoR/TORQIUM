@@ -64,7 +64,7 @@ body {
 
 /* Fondo metálico */
 .pantalla-inicio {
-  background-image: url("imagenes/fondometal1.jpg");
+  background-image: url("../css/fondometal1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -94,18 +94,24 @@ body {
   transform: scale(1.05);
 }
 
+body {
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden; /* ← Solo bloquea scroll horizontal */
+}
+
+/* Para body con fondo metálico en páginas secundarias */
 body.fondo-secundario {
-  background-image: url("imagenes/fondometal.jpg");
+  background-image: url("../css/fondometal.jpg"); /* ← Asegúrate de la ruta si el fondo está dentro de /css */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  padding: 20px; /* nuevo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
+  display: block; /* ← Evita forzar centrado por defecto en pantallas pequeñas */
 }
 
+/* Contenedor de contenido */
 .contenido-secundario {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
@@ -114,46 +120,14 @@ body.fondo-secundario {
   max-width: 500px;
   width: 90%;
   color: white;
+  margin: 0 auto; /* ← Centrado horizontal */
 }
 
-.campo-contacto {
-  margin: 20px 0;
-}
-
-.campo-contacto h2 {
-  margin-bottom: 5px;
-}
-
-a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.volver {
-  display: inline-block;
-  margin-top: 30px;
-  background-color: #003399;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.volver:hover {
-  background-color: #001f66;
-}
-
+/* Responsive mejorado */
 @media screen and (max-width: 768px) {
   .contenido-secundario {
-    width: 90%;
-    padding: 25px 20px;
+    padding: 20px;
     font-size: 14px;
-    border-radius: 10px;
   }
 
   .campo-contacto h2 {
@@ -172,6 +146,6 @@ a:hover {
   }
 
   body.fondo-secundario {
-    padding: 10px; /* añade espacio para que no se pegue a los bordes */
+    padding: 10px;
   }
 }
