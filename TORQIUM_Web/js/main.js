@@ -1,0 +1,1 @@
+// JS principal con particles, scroll y animaciones
