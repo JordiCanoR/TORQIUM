@@ -1,7 +1,43 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-.hero { background: #f1f1f1; padding: 50px 20px; text-align: center; }
-.hero-logo { max-width: 150px; }
-.hero-title { font-size: 2.5em; margin: 10px 0; }
-.hero-subtitle { font-size: 1.2em; color: #555; }
-.hero-nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: #003d99; }
-.hero-nav a:hover { color: #ffd700; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #111;
+    text-align: center;
+}
+
+#intro-video {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro-video video {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.skip-intro {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #ffd700;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skip-intro:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
