@@ -1,115 +1,113 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TORQIUM | Instalaciones y Automatización</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TORQIUM | Instalaciones y Automatización</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+    <div id="intro-video">
+        <video autoplay muted playsinline onended="ocultarIntro()">
+            <source src="media/videologo.mp4" type="video/mp4" />
+            Tu navegador no soporta videos.
+        </video>
+        <button class="skip-intro" onclick="ocultarIntro()">⏭️ Saltar intro</button>
+    </div>
 
-  <!-- VIDEO DE INTRO DE LOGO -->
-  <div id="intro-video">
-    <video autoplay muted playsinline onended="ocultarIntro()">
-      <source src="media/videologo.mp4" type="video/mp4" />
-      Tu navegador no soporta videos.
-    </video>
-    <button class="skip-intro" onclick="ocultarIntro()">⏭️ Saltar intro</button>
-  </div>
+    <div id="contenido-principal" style="display: none;">
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌓 Modo Oscuro</button>
 
-  <!-- CONTENIDO PRINCIPAL OCULTO AL INICIO -->
-  <div id="contenido-principal">
-    <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌓 Modo Oscuro</button>
+        <header>
+            <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo animado" />
+            <h1>TORQIUM</h1>
+            <p class="slogan">Energía e inteligencia para tu hogar y tu negocio</p>
+        </header>
 
-    <header>
-      <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo animado" />
-      <h1>TORQIUM</h1>
-      <p class="slogan">Energía e inteligencia para tu hogar y tu negocio</p>
-    </header>
+        <nav>
+            <a href="#sobre">Sobre Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-    <nav>
-      <a href="#sobre">Sobre Nosotros</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#tecnologias">Tecnologías</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+        <main>
+            <section id="sobre" class="card">
+                <h2><i data-lucide="user"></i> ¿Quiénes somos? / About Us</h2>
+                <p><strong>TORQIUM</strong> es una empresa técnica liderada por Jordi, técnico especialista en automatización y electricidad.</p>
+                <p><strong>TORQIUM</strong> is a technical company led by Jordi, a specialist in automation and electrical installations.</p>
+                <p>Nos dedicamos a ofrecer automatizaciones inteligentes no industriales y servicios eléctricos profesionales.</p>
+                <p>We deliver smart non-industrial automation and professional electrical services.</p>
+            </section>
 
-    <main>
-      <section id="sobre" class="card">
-        <h2><i data-lucide="user"></i> ¿Quiénes somos? / About Us</h2>
-        <p><strong>TORQIUM</strong> es una empresa técnica liderada por Jordi, técnico especialista en automatización y electricidad.</p>
-        <p><strong>TORQIUM</strong> is a technical company led by Jordi, a specialist in automation and electrical installations.</p>
-        <p>Nos dedicamos a ofrecer automatizaciones inteligentes no industriales y servicios eléctricos profesionales.</p>
-        <p>We deliver smart non-industrial automation and professional electrical services.</p>
-      </section>
+            <section id="servicios" class="card">
+                <h2><i data-lucide="wrench"></i> Servicios / Services</h2>
+                <ul>
+                    <li>🔌 Instalaciones eléctricas en viviendas y comercios / Electrical installations</li>
+                    <li>🧠 Programación de PLC Siemens / Siemens PLC programming</li>
+                    <li>💡 Automatización de luces, bombas, portones… / Lighting, gate, pump automation</li>
+                    <li>🏠 Domótica y eficiencia energética / Smart home & energy efficiency</li>
+                    <li>🛠️ Mantenimiento eléctrico general / General electrical maintenance</li>
+                </ul>
+            </section>
 
-      <section id="servicios" class="card">
-        <h2><i data-lucide="wrench"></i> Servicios / Services</h2>
-        <ul>
-          <li>🔌 Instalaciones eléctricas en viviendas y comercios / Electrical installations</li>
-          <li>🧠 Programación de PLC Siemens / Siemens PLC programming</li>
-          <li>💡 Automatización de luces, bombas, portones… / Lighting, gate, pump automation</li>
-          <li>🏠 Domótica y eficiencia energética / Smart home & energy efficiency</li>
-          <li>🛠️ Mantenimiento eléctrico general / General electrical maintenance</li>
-        </ul>
-      </section>
+            <section id="tecnologias" class="card">
+                <h2><i data-lucide="cpu"></i> Tecnologías / Technologies</h2>
+                <ul>
+                    <li>Siemens S7-1200 / TIA Portal</li>
+                    <li>Automatización doméstica y esquemas eléctricos</li>
+                    <li>SCADA/HMI y control desde la web</li>
+                    <li>Instalaciones conforme normativa vigente</li>
+                </ul>
+            </section>
 
-      <section id="tecnologias" class="card">
-        <h2><i data-lucide="cpu"></i> Tecnologías / Technologies</h2>
-        <ul>
-          <li>Siemens S7-1200 / TIA Portal</li>
-          <li>Automatización doméstica y esquemas eléctricos</li>
-          <li>SCADA/HMI y control desde la web</li>
-          <li>Instalaciones conforme normativa vigente</li>
-        </ul>
-      </section>
+            <section id="contacto" class="card contacto">
+                <h2><i data-lucide="mail"></i> 📬 Contacto / Contact</h2>
+                <form action="https://formsubmit.co/torquium@ejemplo.com" method="POST">
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <textarea name="message" placeholder="Tu mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <ul>
+                    <li>📧 Email: <a href="mailto:torquium@ejemplo.com">torquium@ejemplo.com</a></li>
+                    <li>📱 Teléfono: <a href="tel:+34607951520">607 951 520</a></li>
+                    <li>🌐 Web: <a href="https://jordicanor.github.io/TORQIUM" target="_blank" rel="noopener noreferrer">jordicanor.github.io/TORQIUM</a></li>
+                </ul>
+            </section>
+        </main>
 
-      <section id="contacto" class="card contacto">
-        <h2><i data-lucide="mail"></i> 📬 Contacto / Contact</h2>
-        <form action="https://formsubmit.co/torquium@ejemplo.com" method="POST">
-          <input type="text" name="name" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu correo electrónico" required />
-          <textarea name="message" placeholder="Tu mensaje" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-        <ul>
-          <li>📧 Email: <a href="mailto:torquium@ejemplo.com">torquium@ejemplo.com</a></li>
-          <li>📱 Teléfono: <a href="tel:+34607951520">607 951 520</a></li>
-          <li>🌐 Web: <a href="https://jordicanor.github.io/TORQIUM" target="_blank" rel="noopener noreferrer">jordicanor.github.io/TORQIUM</a></li>
-        </ul>
-      </section>
-    </main>
+        <footer>
+            <p>&copy; <span id="year"></span> TORQIUM - Todos los derechos reservados</p>
+        </footer>
 
-    <footer>
-      <p>&copy; <span id="year"></span> TORQIUM - Todos los derechos reservados</p>
-    </footer>
+        <button id="toTopBtn" onclick="scrollToTop()">⬆</button>
+    </div>
 
-    <button id="toTopBtn" onclick="scrollToTop()">⬆</button>
-  </div>
+    <script>
+        lucide.createIcons();
 
-  <script>
-    lucide.createIcons();
+        window.onscroll = function () {
+            const btn = document.getElementById("toTopBtn");
+            btn.style.display = window.scrollY > 200 ? "block" : "none";
+        };
 
-    window.onscroll = function () {
-      const btn = document.getElementById("toTopBtn");
-      btn.style.display = window.scrollY > 200 ? "block" : "none";
-    };
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
 
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+        document.getElementById("year").textContent = new Date().getFullYear();
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
 
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    function ocultarIntro() {
-      document.getElementById("intro-video").style.display = "none";
-      document.getElementById("contenido-principal").style.display = "block";
-    }
-  </script>
+        function ocultarIntro() {
+            document.getElementById("intro-video").style.display = "none";
+            document.getElementById("contenido-principal").style.display = "block";
+        }
+    </script>
 </body>
 </html>
