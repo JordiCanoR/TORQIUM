@@ -1,57 +1,7 @@
-
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #222;
-}
-header {
-  text-align: center;
-  padding: 2rem;
-}
-.logo {
-  width: 120px;
-}
-nav {
-  background: #003d99;
-  color: white;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-}
-main {
-  padding: 2rem;
-}
-footer {
-  background: #eee;
-  padding: 1rem;
-  text-align: center;
-}
-#intro-video {
-  position: fixed;
-  inset: 0;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-#intro-video video {
-  max-width: 80%;
-}
-.skip-intro {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #ffd700;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.hero { background: #f1f1f1; padding: 50px 20px; text-align: center; }
+.hero-logo { max-width: 150px; }
+.hero-title { font-size: 2.5em; margin: 10px 0; }
+.hero-subtitle { font-size: 1.2em; color: #555; }
+.hero-nav a { margin: 0 15px; text-decoration: none; font-weight: bold; color: #003d99; }
+.hero-nav a:hover { color: #ffd700; }

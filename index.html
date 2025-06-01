@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TORQIUM: Instalaciones y Automatización profesional">
-  <meta name="theme-color" content="#001f3f">
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="manifest" href="manifest.json" />
-  <title>TORQIUM | Automatización Inteligente</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORQIUM | Automatización Inteligente</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>
-  <!-- Intro de video -->
-  <div id="intro-video">
-    <video autoplay muted playsinline onended="ocultarIntro()">
-      <source src="media/videologo.mp4" type="video/mp4" />
-      Tu navegador no soporta este formato.
-    </video>
-    <button class="skip-intro" onclick="ocultarIntro()">⏭️ Saltar</button>
-  </div>
-
-  <!-- Encabezado -->
-  <header>
-    <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo animado" />
-    <h1>TORQIUM</h1>
-    <p class="slogan">Instalaciones y Automatización para tu hogar o negocio</p>
-  </header>
-
-  <!-- Navegación -->
-  <nav>
-    <a href="#sobre">Sobre Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <main>
-    <section id="sobre">
-      <h2>¿Quiénes somos?</h2>
-      <p><strong>TORQIUM</strong> está liderada por Jordi, técnico experto en instalaciones eléctricas y automatización inteligente.</p>
-    </section>
-
-    <section id="servicios" class="card">
-      <h2><i data-lucide="wrench"></i> Servicios / Services</h2>
-      <ul>
-       <li>🔌 Instalaciones eléctricas en viviendas y comercios / Electrical installations</li>
-       <li>🧠 Programación de PLC Siemens / Siemens PLC programming</li>
-       <li>💡 Automatización de luces, bombas, portones… / Lighting, gate, pump automation</li>
-       <li>🏠 Domótica y eficiencia energética / Smart home & energy efficiency</li>
-       <li>🧰 Mantenimiento eléctrico general / General electrical maintenance</li>
-     </ul>
-   </section>
-
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:torquium@ejemplo.com">torquium@ejemplo.com</a></p>
-      <p>Teléfono: <a href="tel:+34607951520">607 951 520</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 TORQIUM. Todos los derechos reservados.</p>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <header class="hero">
+        <img src="imagenes/logo.png" alt="Logo TORQIUM" class="hero-logo">
+        <h1 class="hero-title">TORQIUM</h1>
+        <p class="hero-subtitle">Instalaciones y Automatización para tu hogar o negocio</p>
+        <nav class="hero-nav">
+            <a href="sobre.html" target="_blank">Sobre Nosotros</a>
+            <a href="servicios.html" target="_blank">Servicios</a>
+            <a href="contacto.html" target="_blank">Contacto</a>
+        </nav>
+    </header>
 </body>
 </html>

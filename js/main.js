@@ -1,4 +1,1 @@
-
-function ocultarIntro() {
-  document.getElementById("intro-video").style.display = "none";
-}
+// Script básico para futuras mejoras
