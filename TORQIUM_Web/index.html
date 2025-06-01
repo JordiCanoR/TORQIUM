@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TORQIUM | Instalaciones Inteligentes</title>
+  <meta name="description" content="TORQIUM: Instalaciones y Automatización profesional">
+  <meta name="theme-color" content="#001f3f">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  <script defer src="js/main.js"></script>
-  <script defer src="js/lang.js"></script>
+  <title>TORQIUM | Automatización Inteligente</title>
 </head>
 <body>
-  <div id="particles-js"></div>
-  <header class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="videos/fondo_servicios.mp4" type="video/mp4" />
+  <!-- Intro de video -->
+  <div id="intro-video">
+    <video autoplay muted playsinline onended="ocultarIntro()">
+      <source src="media/videologo.mp4" type="video/mp4" />
+      Tu navegador no soporta este formato.
     </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="img/logo.svg" alt="Logo TORQIUM" class="logo animado" />
-      <h1 data-lang="es">Energía e inteligencia para tu hogar y tu negocio</h1>
-      <h1 data-lang="en" style="display:none">Energy and intelligence for your home and business</h1>
-      <button class="btn scroll-down">Ver más</button>
-    </div>
+    <button class="skip-intro" onclick="ocultarIntro()">⏭️ Saltar</button>
+  </div>
+
+  <!-- Encabezado -->
+  <header>
+    <img src="imagenes/logo.png" alt="Logo TORQIUM" class="logo animado" />
+    <h1>TORQIUM</h1>
+    <p class="slogan">Instalaciones y Automatización para tu hogar o negocio</p>
   </header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#sobre">Sobre Nosotros</a></li>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#opiniones">Opiniones</a></li>
-      <li><a href="#faq">FAQs</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><button id="langToggle">EN/ES</button></li>
-    </ul>
+
+  <!-- Navegación -->
+  <nav>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
   </nav>
-  <section id="sobre"></section>
-  <section id="servicios"></section>
-  <section id="proyectos"></section>
-  <section id="opiniones"></section>
-  <section id="faq"></section>
-  <section id="contacto"></section>
-  <footer><p>&copy; <span id="year"></span> TORQIUM. Todos los derechos reservados.</p></footer>
+
+  <main>
+    <section id="sobre">
+      <h2>¿Quiénes somos?</h2>
+      <p><strong>TORQIUM</strong> está liderada por Jordi, técnico experto en instalaciones eléctricas y automatización inteligente.</p>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <ul>
+        <li>🛡️ Instalación de alarmas</li>
+        <li>📦 Cuadros eléctricos</li>
+        <li>🏠 Domótica profesional</li>
+        <li>🛠️ Reparaciones y averías eléctricas</li>
+        <li>🧰 Mantenimiento integral</li>
+      </ul>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:torquium@ejemplo.com">torquium@ejemplo.com</a></p>
+      <p>Teléfono: <a href="tel:+34607951520">607 951 520</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TORQIUM. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

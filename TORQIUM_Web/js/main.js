@@ -1,1 +1,4 @@
-// JS principal con particles, scroll y animaciones
+
+function ocultarIntro() {
+  document.getElementById("intro-video").style.display = "none";
+}

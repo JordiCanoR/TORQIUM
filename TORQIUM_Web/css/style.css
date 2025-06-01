@@ -1,291 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* === RESETEO BÁSICO === */
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+body {
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-}
-
-/* === CONFIGURACIÓN GLOBAL === */
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+  background: #f4f4f4;
   color: #222;
-  overflow-x: hidden;
-  position: relative;
 }
-
-/* Marca de agua en fondo */
-body::before {
-  content: "";
-  background: url("imagenes/logo.png") center center no-repeat;
-  background-size: 40%;
-  opacity: 0.06;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-}
-
-/* === ENCABEZADO === */
 header {
   text-align: center;
-  padding: 40px 20px 10px;
+  padding: 2rem;
 }
-
 .logo {
-  width: 140px;
-  transition: transform 0.5s ease;
+  width: 120px;
 }
-
-.logo.animado:hover {
-  transform: scale(1.1) rotate(2deg);
-}
-
-h1 {
-  font-size: 2.5em;
-  margin: 0.3em 0 0.2em;
-  color: #003d99;
-}
-
-.slogan {
-  font-style: italic;
-  font-size: 1.1em;
-  color: #444;
-}
-
-/* === NAVEGACIÓN === */
 nav {
+  background: #003d99;
+  color: white;
+  padding: 10px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  background: #003d99;
-  padding: 12px;
-  flex-wrap: wrap;
 }
-
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
 }
-
-nav a:hover {
-  text-decoration: underline;
-  color: #ffd700;
-}
-
-/* === MAIN Y SECCIONES === */
 main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 2rem;
 }
-
-.card {
-  background: white;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  animation: fadeIn 0.8s ease;
-}
-
-.card h2 {
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.5em;
-  color: #222;
-}
-
-/* === FORMULARIO === */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input,
-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1em;
-}
-
-form button {
-  padding: 12px;
-  background: #003d99;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #0050cc;
-}
-
-/* === PIE DE PÁGINA === */
 footer {
+  background: #eee;
+  padding: 1rem;
   text-align: center;
-  padding: 30px 10px;
-  font-size: 0.9em;
-  background: #e6e6e6;
-  margin-top: 30px;
 }
-
-/* === BOTÓN MODO OSCURO === */
-.toggle-dark-mode {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 8px 16px;
-  font-size: 0.9em;
-  background: #444;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  z-index: 10000;
-  transition: background 0.3s;
-}
-
-.toggle-dark-mode:hover {
-  background: #222;
-}
-
-/* === BOTÓN IR ARRIBA === */
-#toTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-  padding: 10px 14px;
-  font-size: 20px;
-  border: none;
-  background-color: #003d99;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s;
-}
-
-#toTopBtn:hover {
-  transform: scale(1.1);
-}
-
-/* === MODO OSCURO === */
-body.dark-mode {
-  background: #111;
-  color: #ddd;
-}
-
-body.dark-mode .card {
-  background: #1e1e1e;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode nav {
-  background: #222;
-}
-
-body.dark-mode nav a {
-  color: #eee;
-}
-
-body.dark-mode form input,
-body.dark-mode form textarea {
-  background: #222;
-  border: 1px solid #555;
-  color: white;
-}
-
-body.dark-mode form button {
-  background: #0055cc;
-}
-
-body.dark-mode footer {
-  background: #1a1a1a;
-  color: #aaa;
-}
-
-/* === VIDEO INTRO === */
 #intro-video {
   position: fixed;
   inset: 0;
   background: black;
-  z-index: 9999;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
-
 #intro-video video {
   max-width: 80%;
-  max-height: 80%;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
-
-/* Botón para saltar intro */
 .skip-intro {
-  margin-top: 25px;
-  padding: 10px 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   background: #ffd700;
+  padding: 10px 20px;
   border: none;
-  border-radius: 25px;
-  font-weight: bold;
-  font-size: 1em;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.skip-intro:hover {
-  background: #ffcc00;
-  transform: scale(1.05);
-}
-
-/* === ANIMACIONES === */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* === RESPONSIVE === */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .toggle-dark-mode {
-    top: 10px;
-    right: 10px;
-    font-size: 0.8em;
-    padding: 6px 12px;
-  }
-
-  #intro-video video {
-    max-width: 95%;
-    max-height: 70%;
-  }
 }
