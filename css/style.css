@@ -63,13 +63,14 @@ body {
 
 .pantalla-inicio {
   background-image: url("../imagenes/fondo-metal1.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
   width: 100%;
   flex: 1;
 }
+
 
 .menu-inferior {
   background-color: #003399;
