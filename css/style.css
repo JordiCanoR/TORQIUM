@@ -66,3 +66,9 @@ body {
   color: #ffd700;
   text-decoration: underline;
 }
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
