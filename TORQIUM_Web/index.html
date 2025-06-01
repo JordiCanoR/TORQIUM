@@ -9,6 +9,14 @@
 </head>
 <body>
 
+    <!-- VIDEO DE INTRO DE LOGO -->
+    <div id="intro-video">
+        <video autoplay muted playsinline onended="ocultarIntro()">
+            <source src="imagenes/videologo.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </div>
+
     <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌓 Modo Oscuro</button>
 
     <header>
@@ -92,6 +100,10 @@
 
         function toggleDarkMode() {
             document.body.classList.toggle("dark-mode");
+        }
+
+        function ocultarIntro() {
+            document.getElementById("intro-video").style.display = "none";
         }
     </script>
 </body>
