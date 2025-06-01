@@ -45,19 +45,21 @@ body {
 
 .menu-inferior {
   background-color: #003d99;
-  text-align: center;
-  padding: 15px 10px;
-  position: relative;
-  margin-top: 40px;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .menu-inferior a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  margin: 0 15px;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .menu-inferior a:hover {
