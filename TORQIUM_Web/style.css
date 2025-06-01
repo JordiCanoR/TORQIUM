@@ -9,7 +9,7 @@ body {
 }
 body::before {
   content: "";
-  background-image: url("imagenes/logo.jpg");
+  background-image: url("imagenes/logo.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 60%;
