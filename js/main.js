@@ -1,4 +1,6 @@
+
 function ocultarIntro() {
   document.getElementById("intro-video").style.display = "none";
-  document.getElementById("contenido").style.display = "block";
+  document.getElementById("pantalla-inicio").style.display = "flex";
+  document.body.style.overflow = "hidden"; // para evitar scroll
 }

@@ -72,3 +72,18 @@ header {
   max-width: 800px;
   margin: 0 auto;
 }
+/* CENTRADO DEL LOGO COMO PORTADA INICIAL */
+.pantalla-inicio {
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.logo-grande {
+  max-width: 80%;
+  height: auto;
+}
