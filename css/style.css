@@ -9,82 +9,83 @@
 }
 
 body {
-  background: #000;
-  color: #fff;
+  margin: 0;
+  background-color: black;
   overflow: hidden;
-  height: 100vh;
 }
 
-/* Intro de video */
 #intro-video {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: black;
-  z-index: 9999;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 #intro-video video {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 0 20px #000;
+  border-radius: 20px;
 }
 
 .skip-intro {
-  margin-top: 25px;
-  padding: 12px 24px;
+  position: absolute;
+  bottom: 30px;
   background: #ffd700;
   border: none;
-  border-radius: 30px;
+  padding: 12px 28px;
   font-weight: bold;
-  font-size: 1em;
+  border-radius: 25px;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
 }
 
 .skip-intro:hover {
-  background: #ffcc00;
   transform: scale(1.05);
 }
 
-/* Contenido con fondo metálico */
 #contenido {
-  display: none;
-  width: 100%;
   height: 100vh;
-  background: url("imagenes/fondo-metal1.jpg") no-repeat center center fixed;
-  background-size: cover;
+  width: 100vw;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 30px;
+  justify-content: space-between;
 }
 
-/* Menú inferior */
-.menu-inferior {
-  background-color: rgba(0, 51, 153, 0.9);
+.pantalla-inicio {
+  background-image: url("../imagenes/fondo-metal1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
   width: 100%;
-  text-align: center;
-  padding: 15px 0;
+  flex: 1;
+}
+
+.menu-inferior {
+  background-color: #003399;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 60px;
+  padding: 12px;
+  color: white;
 }
 
 .menu-inferior a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1em;
-  transition: color 0.3s;
 }
 
 .menu-inferior a:hover {
-  color: #ffd700;
+  text-decoration: underline;
 }

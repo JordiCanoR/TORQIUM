@@ -1,8 +1,6 @@
 function ocultarIntro() {
-  const intro = document.getElementById("intro-video");
-  const contenido = document.getElementById("contenido");
-
-  intro.style.display = "none";
-  contenido.style.display = "block"; // cambiamos a block para visibilidad
-  document.body.style.overflow = "hidden"; // mantiene el scroll oculto si lo deseas
+  document.getElementById("intro-video").style.display = "none";
+  document.getElementById("contenido").style.display = "flex";
+  document.getElementById("pantalla-inicio").style.display = "block";
+  document.body.style.overflow = "hidden"; // Evita scroll
 }
