@@ -16,29 +16,36 @@
 
   <!-- CONTENIDO PRINCIPAL -->
   <div id="contenido" style="display: none;">
+
+    <!-- Fondo metálico y zona del logo -->
     <div class="pantalla-inicio">
       <div class="zona-logo">
         <img src="imagenes/logo.png" alt="Logo TORQIUM">
         <h1>TORQIUM</h1>
         <p>INSTALACIONES Y AUTOMATIZACIÓN</p>
       </div>
-      <div class="menu-inferior">
-        <a href="html/contacto.html">Contacto</a>
-        <a href="html/servicios.html">Servicios</a>
-        <a href="html/sobre.html">Sobre Nosotros</a>
-      </div>
     </div>
+
+    <!-- Menú inferior fuera del fondo -->
+    <div class="menu-inferior">
+      <a href="html/contacto.html">Contacto</a>
+      <a href="html/servicios.html">Servicios</a>
+      <a href="html/sobre.html">Sobre Nosotros</a>
+    </div>
+
   </div>
 
+  <!-- Script para controlar el salto de intro -->
   <script>
     function terminarIntro() {
       document.getElementById("intro-video").style.display = "none";
       document.getElementById("contenido").style.display = "block";
     }
 
-    // Oculta automáticamente tras el vídeo
+    // Ocultar intro automáticamente al terminar el vídeo
     const video = document.querySelector("#intro-video video");
     video.onended = terminarIntro;
   </script>
+
 </body>
 </html>
