@@ -102,27 +102,31 @@ body {
   transform: scale(1.05);
 }
 
-/* Fondo metálico para páginas secundarias */
 body.fondo-secundario {
   background-image: url("fondometal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100svh;
-  padding: 20px;
-  display: block;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-/* Contenedor central de contenido */
 .contenido-secundario {
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 30px;
   border-radius: 15px;
   max-width: 450px;
   width: 90%;
   color: white;
-  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Elementos dentro del contenido */
