@@ -8,25 +8,17 @@
 </head>
 <body>
 
-  <!-- Intro en vídeo -->
+  <!-- Intro de video -->
   <div id="intro-video">
     <video src="media/videologo.mp4" autoplay muted playsinline></video>
     <button class="skip-intro" onclick="terminarIntro()">Saltar</button>
   </div>
 
-  <!-- Contenido visible tras intro -->
+  <!-- Pantalla principal sin duplicar logo -->
   <div id="contenido" style="display: none;">
+    <div class="pantalla-inicio"></div>
 
-    <!-- Pantalla con fondo -->
-    <div class="pantalla-inicio">
-      <div class="zona-logo">
-        <img src="imagenes/logo.png" alt="Logo TORQIUM" />
-        <h1>TORQIUM</h1>
-        <p>INSTALACIONES Y AUTOMATIZACIÓN</p>
-      </div>
-    </div>
-
-    <!-- Menú azul separado -->
+    <!-- Menú inferior azul perfectamente alineado bajo la línea dorada -->
     <div class="menu-inferior">
       <a href="html/contacto.html">Contacto</a>
       <a href="html/servicios.html">Servicios</a>
