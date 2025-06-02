@@ -77,21 +77,37 @@ body {
   text-align: center;
 }
 
-/* ────── MENÚ INFERIOR SEPARADO ────── */
+.zona-logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.zona-logo h1 {
+  font-size: 36px;
+  color: #0066cc;
+  font-weight: 700;
+}
+
+.zona-logo p {
+  font-size: 16px;
+  color: white;
+  font-weight: 300;
+}
+
+/* Menú separado y abajo */
 .menu-inferior {
   background-color: #003399;
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 40px;
-  padding: 18px 10px;
-  font-size: 16px;
+  padding: 15px 10px;
   flex-wrap: wrap;
+  font-size: 15px;
   width: 100%;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 5;
 }
+
 
 .menu-inferior a {
   color: white;
