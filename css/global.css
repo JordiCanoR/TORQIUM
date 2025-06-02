@@ -64,32 +64,31 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* FONDO DE INICIO */
 .pantalla-inicio {
-  background-image: url("../imagenes/fondometal1.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  background-image: url('../imagenes/fondometal1.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  height: calc(100svh - 60px);
-  width: 100vw;
+  background-repeat: no-repeat;
+  padding-bottom: 60px; /* deja espacio para el menú azul */
+  box-sizing: border-box;
+}
+.menu-inferior {
+  width: 100%;
+  background-color: #0033a0; /* azul fuerte */
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  gap: 2rem;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-/* ───────────── MENÚ INFERIOR ───────────── */
-.menu-inferior {
-  background-color: #003399;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 15px 10px;
-  flex-wrap: wrap;
-  font-size: 15px;
-  position: relative;
-  z-index: 5;
-}
 
 .menu-inferior a {
   color: white;
