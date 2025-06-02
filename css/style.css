@@ -18,8 +18,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 80vh;
   background: black;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@ body {
 .skip-intro {
   position: absolute;
   bottom: 30px;
-  background: #ffd700;
+  background: #003cff;
   border: none;
   padding: 12px 28px;
   font-weight: bold;
@@ -64,7 +64,7 @@ body {
 
 /* Fondo metálico */
 .pantalla-inicio {
-  background-image: url("../css/fondometal1.jpg");
+  background-image: url("fondometal1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +102,7 @@ body {
 
 /* Para body con fondo metálico en páginas secundarias */
 body.fondo-secundario {
-  background-image: url("../css/fondometal.jpg"); /* ← Asegúrate de la ruta si el fondo está dentro de /css */
+  background-image: url("fondometal.jpg"); /* ← Asegúrate de la ruta si el fondo está dentro de /css */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
