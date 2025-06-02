@@ -196,3 +196,10 @@ a:hover {
     max-height: 85svh;
   }
 }
+@media screen and (min-width: 1024px) {
+  body.fondo-secundario {
+    padding-top: 120px;     /* Ajusta hasta que esté entre las líneas doradas */
+    padding-bottom: 120px;
+    align-items: flex-start; /* Mantiene el contenido arriba para controlarlo con padding */
+  }
+}
