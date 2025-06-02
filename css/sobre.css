@@ -5,37 +5,43 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.contenido-sobre {
+.pantalla-sobre {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
-  padding: 50px 40px;
-  border-radius: 15px;
-  color: white;
-  max-width: 600px;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
 }
 
-.contenido-sobre h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #00aaff;
+.contenido-texto {
+  max-width: 900px;
+  color: white;
+  padding: 20px;
 }
 
-.contenido-sobre p {
-  margin-bottom: 18px;
-  font-size: 16px;
+.contenido-texto h1 {
+  color: #0099ff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contenido-texto p {
+  font-size: 18px;
   line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.contenido-sobre span {
+.resaltado-amarillo {
   color: #ffc107;
   font-weight: 500;
 }
 
 .volver {
-  display: inline-block;
   margin-top: 30px;
   background-color: #003399;
   color: white;
@@ -43,8 +49,6 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
 }
 
 .volver:hover {
@@ -53,16 +57,12 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .contenido-sobre {
-    padding: 30px 20px;
-  }
-
-  .contenido-sobre h1 {
+  .contenido-texto h1 {
     font-size: 24px;
   }
 
-  .contenido-sobre p {
-    font-size: 14px;
+  .contenido-texto p {
+    font-size: 16px;
   }
 
   .volver {
