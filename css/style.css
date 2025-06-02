@@ -19,7 +19,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh; /* Adaptado a móviles */
   background: black;
   display: flex;
   justify-content: center;
@@ -28,16 +28,17 @@ body {
 }
 
 #intro-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 90vw;
+  height: auto;
+  max-height: 90svh;
+  object-fit: contain;
   border-radius: 0;
 }
 
 /* Botón Saltar */
 .skip-intro {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   background: #003cff;
   border: none;
   padding: 12px 28px;
@@ -47,6 +48,7 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s ease;
+  z-index: 11;
 }
 
 .skip-intro:hover {
@@ -55,22 +57,24 @@ body {
 
 /* Contenido principal */
 #contenido {
-  min-height: 100vh;
+  height: 100svh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Fondo metálico página principal */
+/* Fondo metálico de inicio */
 .pantalla-inicio {
   background-image: url("fondometal1.jpg");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  flex: 1;
+  height: 100svh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 /* Menú inferior fijo */
@@ -81,13 +85,15 @@ body {
   gap: 40px;
   padding: 15px 10px;
   flex-wrap: wrap;
+  font-size: 15px;
+  position: relative;
+  z-index: 5;
 }
 
 .menu-inferior a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -96,39 +102,36 @@ body {
   transform: scale(1.05);
 }
 
-/* Fondos para páginas secundarias */
+/* Fondo metálico para páginas secundarias */
 body.fondo-secundario {
   background-image: url("fondometal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 15px;
-  flex-direction: column;
+  min-height: 100svh;
+  padding: 20px;
+  display: block;
 }
 
-/* Contenedor de contenido secundario */
+/* Contenedor central de contenido */
 .contenido-secundario {
-  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 15px;
   max-width: 500px;
-  width: 100%;
-  text-align: center;
+  width: 90%;
   color: white;
+  margin: 0 auto;
 }
 
-/* Campos individuales */
+/* Elementos dentro del contenido */
 .campo-contacto {
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .campo-contacto h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 a {
@@ -140,6 +143,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Botón volver */
 .volver {
   display: inline-block;
   margin-top: 30px;
@@ -155,19 +159,11 @@ a:hover {
   background-color: #001f66;
 }
 
-/* RESPONSIVE TOTAL */
+/* Responsive para móviles */
 @media screen and (max-width: 768px) {
-  #intro-video {
-    width: 100vw;
-    height: 100vh;
-  }
-
   .contenido-secundario {
-    padding: 25px 20px;
+    padding: 20px;
     font-size: 14px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 100%;
   }
 
   .campo-contacto h2 {
@@ -185,23 +181,14 @@ a:hover {
     padding: 8px 16px;
   }
 
-  body.fondo-secundario {
-    padding: 20px 10px;
-    flex-direction: column;
-  }
-
   .menu-inferior {
-    flex-direction: row;
-    gap: 20px;
+    gap: 25px;
+    font-size: 13px;
+    padding: 10px;
   }
 
-  .menu-inferior a {
-    font-size: 14px;
-  }
-
-  .skip-intro {
-    font-size: 14px;
-    padding: 10px 20px;
-    bottom: 20px;
+  #intro-video video {
+    width: 100vw;
+    max-height: 85svh;
   }
 }
