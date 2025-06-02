@@ -77,26 +77,6 @@ body {
   text-align: center;
 }
 
-/* ────── ZONA LOGO ────── */
-.zona-logo img {
-  max-width: 140px;
-  margin-bottom: 20px;
-}
-
-.zona-logo h1 {
-  font-size: 36px;
-  color: #0066cc;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.zona-logo p {
-  font-size: 16px;
-  color: white;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
 /* ────── MENÚ INFERIOR SEPARADO ────── */
 .menu-inferior {
   background-color: #003399;
