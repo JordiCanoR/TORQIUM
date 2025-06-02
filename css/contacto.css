@@ -1,81 +1,62 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
   font-family: 'Poppins', sans-serif;
-}
-
-.pantalla-contacto {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
-  padding: 80px 20px;
+  color: white;
+  height: 100svh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.contenedor-contacto {
+  height: calc(100svh - 65px); /* espacio para botón */
+  display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.contenido-contacto {
-  color: white;
-  max-width: 700px;
-  padding: 20px;
-}
-
-.contenido-contacto h1 {
-  color: #0099ff;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.contenido-contacto p {
+.info-contacto {
   font-size: 18px;
-  margin-bottom: 16px;
+  line-height: 2;
+  font-weight: 400;
 }
 
-.icono {
-  font-size: 20px;
-  margin-right: 5px;
+.info-contacto i {
+  margin-right: 8px;
 }
 
-a {
-  color: #ffc107;
+.info-contacto a {
+  color: #ffcc00;
   text-decoration: none;
+  font-weight: bold;
 }
 
-a:hover {
+.info-contacto a:hover {
   text-decoration: underline;
 }
 
 /* Botón volver */
 .volver {
-  margin-top: 30px;
   background-color: #003399;
   color: white;
   padding: 12px 24px;
+  border: none;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  align-self: center;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
 }
 
 .volver:hover {
   background-color: #001f66;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .contenido-contacto h1 {
-    font-size: 24px;
-  }
-
-  .contenido-contacto p {
-    font-size: 16px;
-  }
-
-  .volver {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
+  transform: scale(1.05);
 }
