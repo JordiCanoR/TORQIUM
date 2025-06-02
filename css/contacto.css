@@ -1,69 +1,101 @@
-body.fondo-secundario {
-  background-image: url("../imagenes/fondometal.jpg");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pantalla-contacto {
+  background-image: url("../imagenes/fondometal1.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  padding: 60px 20px;
 }
 
-.contenido-secundario {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px;
+.formulario-contacto {
+  background-image: url("../imagenes/fondometal.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 40px;
   border-radius: 15px;
-  max-width: 450px;
-  width: 90%;
   color: white;
   text-align: center;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.formulario-contacto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-/* Elementos dentro del contenido */
-.campo-contacto {
-  margin: 20px 0;
+.formulario-contacto p {
+  margin: 10px 0 25px;
+  font-size: 16px;
+  word-break: break-word;
 }
 
-.campo-contacto h2 {
-  margin-bottom: 5px;
+/* Colores por tipo */
+.email p {
+  color: white;
+}
+.telefono p {
+  color: #ff4d79;
+}
+.web p {
+  color: #ffcc00;
 }
 
-a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+/* Iconos grandes y centrados */
+.icono {
+  font-size: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* Botón volver */
 .volver {
   display: inline-block;
-  margin-top: 30px;
-  background-color: #003399;
+  background-color: #003cff;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 28px;
+  margin-top: 30px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .volver:hover {
-  background-color: #001f66;
+  background-color: #0022aa;
 }
 
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .formulario-contacto {
+    padding: 30px 20px;
+  }
 
-@media screen and (min-width: 1024px) {
-  body.fondo-secundario {
-    padding-top: 120px;     /* Ajusta hasta que esté entre las líneas doradas */
-    padding-bottom: 120px;
-    align-items: flex-start; /* Mantiene el contenido arriba para controlarlo con padding */
+  .formulario-contacto h2 {
+    font-size: 20px;
+  }
+
+  .formulario-contacto p {
+    font-size: 14px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
