@@ -66,14 +66,35 @@ body {
 
 .pantalla-inicio {
   background-image: url("../imagenes/fondometal1.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100svh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ───────────── ZONA LOGO ───────────── */
+.zona-logo img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.zona-logo h1 {
+  font-size: 36px;
+  color: #0070ff;
+  font-weight: 700;
+}
+
+.zona-logo p {
+  font-size: 18px;
+  color: white;
+  letter-spacing: 1px;
 }
 
 /* ───────────── MENÚ INFERIOR ───────────── */
@@ -119,30 +140,35 @@ body {
 
 /* ───────────── RESPONSIVE ───────────── */
 @media screen and (max-width: 768px) {
-  .contenido-secundario {
-    padding: 20px;
+  .pantalla-inicio {
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .zona-logo img {
+    max-width: 100px;
+  }
+
+  .zona-logo h1 {
+    font-size: 28px;
+  }
+
+  .zona-logo p {
     font-size: 14px;
   }
 
-  .campo-contacto h2 {
-    font-size: 16px;
-  }
-
-  .campo-contacto p,
-  .campo-contacto a {
+  .menu-inferior {
+    flex-direction: column;
+    gap: 15px;
     font-size: 14px;
-    word-break: break-word;
+    padding: 10px;
   }
 
   .volver {
     font-size: 14px;
     padding: 8px 16px;
-  }
-
-  .menu-inferior {
-    gap: 25px;
-    font-size: 13px;
-    padding: 10px;
   }
 
   #intro-video video {
