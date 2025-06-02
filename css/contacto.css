@@ -5,39 +5,47 @@ body {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
   height: 100svh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-.contenedor-contacto {
-  height: calc(100svh - 65px); /* espacio para botón */
+.contacto-contenido {
+  height: calc(100svh - 60px); /* Espacio para botón */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 30px;
   text-align: center;
 }
 
-.info-contacto {
-  font-size: 18px;
+.contacto-caja {
+  max-width: 800px;
+  font-size: 17px;
   line-height: 2;
-  font-weight: 400;
 }
 
-.info-contacto i {
-  margin-right: 8px;
+.contacto-caja h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
-.info-contacto a {
-  color: #ffcc00;
+.contacto-caja p {
+  margin: 10px 0;
+}
+
+.contacto-caja a {
+  color: #ffd700;
   text-decoration: none;
   font-weight: bold;
 }
 
-.info-contacto a:hover {
+.contacto-caja a:hover {
   text-decoration: underline;
 }
 
@@ -59,4 +67,21 @@ body {
 .volver:hover {
   background-color: #001f66;
   transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contacto-caja {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .contacto-caja h2 {
+    font-size: 20px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
 }
