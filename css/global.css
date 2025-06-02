@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+/* RESET GENERAL */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
 body {
+  margin: 0;
   background-color: black;
-  overflow: hidden; /* 👈 Evita el scroll */
+  overflow-x: hidden;
 }
 
-/* Intro video */
+/* ───────────── VIDEO INTRO ───────────── */
 #intro-video {
   position: fixed;
   top: 0;
@@ -51,33 +53,40 @@ body {
 .skip-intro:hover {
   transform: scale(1.05);
 }
+
+/* ───────────── CONTENIDO PRINCIPAL ───────────── */
 #contenido {
-  width: 100vw;
   height: 100svh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Pantalla principal con fondo ya integrado */
+/* FONDO DE INICIO */
 .pantalla-inicio {
   background-image: url("../imagenes/fondometal1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  height: calc(100svh - 55px); /* 55px exactos del menú */
+  height: calc(100svh - 60px);
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-/* Menú azul justo debajo del fondo sin solaparse */
+/* ───────────── MENÚ INFERIOR ───────────── */
 .menu-inferior {
   background-color: #003399;
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding: 10px;
-  height: 55px; /* Esto debe coincidir */
+  padding: 15px 10px;
+  flex-wrap: wrap;
   font-size: 15px;
-  width: 100vw;
   position: relative;
   z-index: 5;
 }
@@ -94,13 +103,59 @@ body {
   transform: scale(1.05);
 }
 
-/* Responsive */
+/* ───────────── BOTÓN VOLVER ───────────── */
+.volver {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #003399;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.volver:hover {
+  background-color: #001f66;
+}
+
+/* ───────────── RESPONSIVE ───────────── */
 @media screen and (max-width: 768px) {
+  .pantalla-inicio {
+    height: calc(100svh - 55px);
+    justify-content: flex-start;
+    padding-top: 5svh;
+  }
+
+  .contenido-secundario {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .campo-contacto h2 {
+    font-size: 16px;
+  }
+
+  .campo-contacto p,
+  .campo-contacto a {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
   .menu-inferior {
     gap: 25px;
     font-size: 13px;
-    height: auto;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
   }
 
   #intro-video video {
