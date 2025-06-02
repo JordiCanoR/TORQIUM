@@ -1,73 +1,56 @@
 body {
   margin: 0;
   padding: 0;
-  background: black;
+  background-color: black;
   font-family: 'Poppins', sans-serif;
 }
 
 .pantalla-servicios {
-  background-image: url("../imagenes/fondometal1.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding-top: 80px;
-}
-
-.menu-servicios {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  background-color: #001a4d;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.menu-servicios a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 12px 24px;
-  background-color: #0040ff;
-  border-radius: 10px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.menu-servicios a:hover {
-  background-color: #002f80;
-  transform: scale(1.05);
-}
-
-.bloque-servicio {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+.boton-servicio img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+}
+
+.boton-servicio img:hover {
+  transform: scale(1.05);
 }
 
 /* Botón volver */
 .volver {
-  display: block;
-  text-align: center;
-  margin: 40px auto;
+  margin-top: 40px;
   background-color: #003399;
   color: white;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  width: fit-content;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .volver:hover {
@@ -76,15 +59,13 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 768px) {
-  .menu-servicios {
-    gap: 15px;
-    padding: 15px;
-    flex-direction: column;
+  .grid-servicios {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
-  .bloque-servicio {
-    font-size: 20px;
-    padding: 30px 15px;
+  .boton-servicio img {
+    max-width: 100%;
   }
 
   .volver {
