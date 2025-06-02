@@ -10,7 +10,7 @@
 body {
   margin: 0;
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Intro de video */
@@ -18,8 +18,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   background: black;
   display: flex;
   justify-content: center;
@@ -55,20 +55,22 @@ body {
 
 /* Contenido principal */
 #contenido {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Fondo metálico */
+/* Fondo metálico página principal */
 .pantalla-inicio {
   background-image: url("fondometal1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Menú inferior fijo */
@@ -94,40 +96,78 @@ body {
   transform: scale(1.05);
 }
 
-body {
-  margin: 0;
-  background-color: black;
-  overflow-x: hidden; /* ← Solo bloquea scroll horizontal */
-}
-
-/* Para body con fondo metálico en páginas secundarias */
+/* Fondos para páginas secundarias */
 body.fondo-secundario {
-  background-image: url("fondometal.jpg"); /* ← Asegúrate de la ruta si el fondo está dentro de /css */
+  background-image: url("fondometal.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  padding: 20px;
-  display: block; /* ← Evita forzar centrado por defecto en pantallas pequeñas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  flex-direction: column;
 }
 
-/* Contenedor de contenido */
+/* Contenedor de contenido secundario */
 .contenido-secundario {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 40px;
   border-radius: 15px;
   max-width: 500px;
-  width: 90%;
+  width: 100%;
+  text-align: center;
   color: white;
-  margin: 0 auto; /* ← Centrado horizontal */
 }
 
-/* Responsive mejorado */
+/* Campos individuales */
+.campo-contacto {
+  margin: 25px 0;
+}
+
+.campo-contacto h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #003399;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.volver:hover {
+  background-color: #001f66;
+}
+
+/* RESPONSIVE TOTAL */
 @media screen and (max-width: 768px) {
+  #intro-video {
+    width: 100vw;
+    height: 100vh;
+  }
+
   .contenido-secundario {
-    padding: 20px;
+    padding: 25px 20px;
     font-size: 14px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .campo-contacto h2 {
@@ -146,6 +186,22 @@ body.fondo-secundario {
   }
 
   body.fondo-secundario {
-    padding: 10px;
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+
+  .menu-inferior {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .menu-inferior a {
+    font-size: 14px;
+  }
+
+  .skip-intro {
+    font-size: 14px;
+    padding: 10px 20px;
+    bottom: 20px;
   }
 }
