@@ -1,87 +1,82 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-image: url("../imagenes/fondometal.jpg");
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url("../imagenes/fondometal1.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   color: white;
-  height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.linea-superior,
+.linea-inferior {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #d18100, #ffbb33, #d18100);
+  margin: 10px 0;
+  box-shadow: 0 0 5px #ffbb33;
 }
 
 .contacto-contenido {
-  height: calc(100svh - 60px); /* Espacio para botón */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
   text-align: center;
+  max-width: 90%;
+  padding: 0 20px;
+  margin-top: 0;
 }
 
 .contacto-caja {
-  max-width: 800px;
-  font-size: 17px;
-  line-height: 2;
+  backdrop-filter: none;
+  background: transparent;
 }
 
 .contacto-caja h2 {
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-size: 24px;
+  color: white;
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 .contacto-caja p {
-  margin: 10px 0;
+  font-size: 1.2em;
+  margin: 0.5em 0;
 }
 
 .contacto-caja a {
-  color: #ffd700;
+  color: #00aaff;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.contacto-caja a:hover {
-  text-decoration: underline;
-}
-
-/* Botón volver */
 .volver {
-  background-color: #003399;
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #0039a6;
   color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
   font-weight: bold;
-  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 6px;
   text-decoration: none;
-  align-self: center;
-  margin-bottom: 10px;
-  transition: all 0.2s ease;
+  transition: background 0.3s ease;
 }
 
 .volver:hover {
-  background-color: #001f66;
-  transform: scale(1.05);
+  background-color: #002366;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .contacto-caja {
-    font-size: 15px;
-    padding: 0 15px;
+@media (min-width: 768px) {
+  .contacto-contenido {
+    padding: 0 100px;
   }
 
   .contacto-caja h2 {
-    font-size: 20px;
+    font-size: 2.5em;
   }
 
-  .volver {
-    font-size: 14px;
-    padding: 10px 18px;
+  .contacto-caja p {
+    font-size: 1.4em;
   }
 }
