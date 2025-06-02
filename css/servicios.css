@@ -15,21 +15,24 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+  position: relative;
 }
 
 .grid-servicios {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 40px 60px;
   max-width: 900px;
   width: 100%;
   justify-items: center;
   align-items: center;
+  padding: 40px 0;
+  z-index: 2;
 }
 
 .boton-servicio img {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   height: auto;
   transition: transform 0.3s ease;
   border-radius: 8px;
@@ -38,6 +41,21 @@ body {
 
 .boton-servicio img:hover {
   transform: scale(1.05);
+}
+
+/* Centrado absoluto para escritorio */
+@media screen and (min-width: 769px) {
+  .pantalla-servicios {
+    height: 100vh;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .grid-servicios {
+    padding: 0;
+    position: relative;
+    top: -40px;
+  }
 }
 
 /* Botón volver */
@@ -51,17 +69,19 @@ body {
   font-weight: bold;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  z-index: 3;
 }
 
 .volver:hover {
   background-color: #001f66;
 }
 
-/* Responsive */
+/* Responsive móvil: 1 columna */
 @media screen and (max-width: 768px) {
   .grid-servicios {
     grid-template-columns: 1fr;
     gap: 25px;
+    padding: 20px 0;
   }
 
   .boton-servicio img {
