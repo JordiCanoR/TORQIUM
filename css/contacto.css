@@ -1,85 +1,74 @@
-/* contacto.css */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('../imagenes/fondometal.jpg');
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .contacto-contenido {
+    max-width: 900px;
+    margin: auto;
     text-align: center;
-    padding: 20px 40px;
-    max-width: 800px;
-}
-
-.contacto-caja p {
-    font-size: 17px;
-    margin: 15px 0;
-}
-
-.contacto-caja a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contacto-caja a:hover {
-    text-decoration: underline;
-}
-
-.contacto-caja i,
-.contacto-caja svg,
-.contacto-caja span {
-    margin-right: 8px;
+    padding: 0 20px;
+    line-height: 1.7;
 }
 
 h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #ffffff;
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: white;
+    margin: 10px 0;
+}
+
+strong {
+    color: white;
+}
+
+span {
+    color: #ffc107;
+    font-weight: bold;
 }
 
 .volver {
-    margin-top: 30px;
-    padding: 12px 25px;
+    display: inline-block;
+    margin-top: 40px;
     background-color: #0033aa;
     color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .volver:hover {
-    background-color: #001f70;
+    background-color: #0055ff;
 }
 
 @media screen and (max-width: 768px) {
     .contacto-contenido {
-        padding: 15px 20px;
+        padding: 0 10px;
+        font-size: 0.95em;
     }
 
     h2 {
-        font-size: 24px;
-    }
-
-    .contacto-caja p {
-        font-size: 15px;
+        font-size: 1.5em;
     }
 
     .volver {
-        font-size: 15px;
-        padding: 10px 20px;
+        padding: 10px 15px;
+        font-size: 0.95em;
     }
 }
