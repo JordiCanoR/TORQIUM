@@ -5,17 +5,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.pantalla-sobre {
-  background-image: url("../imagenes/fondometal1.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-}
-
 .contenido-sobre {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
