@@ -20,7 +20,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100svh; /* altura segura para móviles */
+  height: 100svh;
   background: black;
   display: flex;
   justify-content: center;
@@ -35,7 +35,6 @@ body {
   object-fit: contain;
 }
 
-/* Botón de saltar intro */
 .skip-intro {
   position: absolute;
   bottom: 20px;
@@ -55,7 +54,7 @@ body {
   transform: scale(1.05);
 }
 
-/* ───────────── PANTALLA INICIAL ───────────── */
+/* ───────────── PANTALLA PRINCIPAL ───────────── */
 #contenido {
   height: 100svh;
   width: 100vw;
@@ -73,39 +72,41 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
-/* ───────────── ZONA LOGO ───────────── */
+/* ────── LOGO Y TÍTULO ────── */
 .zona-logo img {
-  max-width: 150px;
+  max-width: 140px;
   margin-bottom: 20px;
 }
 
 .zona-logo h1 {
   font-size: 36px;
-  color: #0070ff;
+  color: #0066cc;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .zona-logo p {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
-/* ───────────── MENÚ INFERIOR ───────────── */
+/* ────── MENÚ INFERIOR ────── */
 .menu-inferior {
   background-color: #003399;
+  width: 100%;
+  padding: 15px 10px;
   display: flex;
   justify-content: center;
   gap: 40px;
-  padding: 15px 10px;
   flex-wrap: wrap;
-  font-size: 15px;
   position: relative;
   z-index: 5;
 }
@@ -114,7 +115,8 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.2s ease-in-out;
+  font-size: 16px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .menu-inferior a:hover {
@@ -122,29 +124,11 @@ body {
   transform: scale(1.05);
 }
 
-/* ───────────── BOTÓN VOLVER ───────────── */
-.volver {
-  display: inline-block;
-  margin-top: 30px;
-  background-color: #003399;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.volver:hover {
-  background-color: #001f66;
-}
-
-/* ───────────── RESPONSIVE ───────────── */
+/* ────── RESPONSIVE ────── */
 @media screen and (max-width: 768px) {
   .pantalla-inicio {
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
     padding: 20px 10px;
+    justify-content: center;
   }
 
   .zona-logo img {
@@ -160,15 +144,15 @@ body {
   }
 
   .menu-inferior {
-    flex-direction: column;
-    gap: 15px;
+    gap: 25px;
     font-size: 14px;
-    padding: 10px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .volver {
+  .menu-inferior a {
     font-size: 14px;
-    padding: 8px 16px;
   }
 
   #intro-video video {
