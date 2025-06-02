@@ -1,0 +1,69 @@
+body.fondo-secundario {
+  background-image: url("../imagenes/fondometal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.contenido-secundario {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 450px;
+  width: 90%;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Elementos dentro del contenido */
+.campo-contacto {
+  margin: 20px 0;
+}
+
+.campo-contacto h2 {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Botón volver */
+.volver {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #003399;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.volver:hover {
+  background-color: #001f66;
+}
+
+
+@media screen and (min-width: 1024px) {
+  body.fondo-secundario {
+    padding-top: 120px;     /* Ajusta hasta que esté entre las líneas doradas */
+    padding-bottom: 120px;
+    align-items: flex-start; /* Mantiene el contenido arriba para controlarlo con padding */
+  }
+}

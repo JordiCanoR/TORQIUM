@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pantalla-servicios {
+  background-image: url("../imagenes/fondometal1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.menu-servicios {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: #001a4d;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.menu-servicios a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 24px;
+  background-color: #0040ff;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.menu-servicios a:hover {
+  background-color: #002f80;
+  transform: scale(1.05);
+}
+
+.bloque-servicio {
+  background-image: url("../imagenes/fondometal.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Botón volver */
+.volver {
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+  background-color: #003399;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.volver:hover {
+  background-color: #001f66;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .menu-servicios {
+    gap: 15px;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .bloque-servicio {
+    font-size: 20px;
+    padding: 30px 15px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
