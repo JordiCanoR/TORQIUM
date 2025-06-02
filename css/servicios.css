@@ -93,3 +93,24 @@ body {
     padding: 10px 20px;
   }
 }
+.rayo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 800px;
+  z-index: 1;
+  opacity: 0;
+  animation: destello 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes destello {
+  0%, 97%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
