@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+.pantalla-sobre {
+  background-image: url("../imagenes/fondometal1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.contenido-sobre {
+  background-image: url("../imagenes/fondometal.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 40px;
+  border-radius: 15px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+.contenido-sobre h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #00aaff;
+}
+
+.contenido-sobre p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contenido-sobre span {
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #003399;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.volver:hover {
+  background-color: #001f66;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contenido-sobre {
+    padding: 30px 20px;
+  }
+
+  .contenido-sobre h1 {
+    font-size: 24px;
+  }
+
+  .contenido-sobre p {
+    font-size: 14px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
