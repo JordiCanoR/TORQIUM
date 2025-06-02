@@ -5,41 +5,47 @@ body {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: white;
   height: 100svh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-.contenedor-sobre {
-  height: calc(100svh - 65px); /* espacio para botón */
+.sobre-contenido {
+  height: calc(100svh - 60px); /* Resto para botón abajo */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 0 30px;
   text-align: center;
 }
 
-.texto-sobre {
+.sobre-texto {
   max-width: 800px;
-  font-size: 16px;
   line-height: 1.8;
-  font-weight: 300;
+  font-size: 17px;
+}
+
+.sobre-texto h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.sobre-texto strong {
   color: white;
-  background: transparent;
 }
 
-.texto-sobre strong {
-  font-weight: 700;
+.sobre-texto em {
+  color: #ffc107;
+  font-style: normal;
+  font-weight: bold;
 }
 
-.texto-sobre .amarillo {
-  color: #ffb100;
-}
-
-/* Botón Volver */
+/* Botón */
 .volver {
   background-color: #003399;
   color: white;
@@ -57,4 +63,21 @@ body {
 .volver:hover {
   background-color: #001f66;
   transform: scale(1.05);
+}
+
+/* Móvil */
+@media screen and (max-width: 768px) {
+  .sobre-texto {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 20px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
 }
