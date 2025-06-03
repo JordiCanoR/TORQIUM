@@ -9,14 +9,17 @@ body {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh; /* CAMBIA min-height POR height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 0; /* ELIMINA padding que empuja contenido */
+  margin: 0;
   position: relative;
+  overflow: hidden;
 }
+
 
 .grid-servicios {
   display: grid;
