@@ -93,15 +93,19 @@ body {
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-servicios {
-    height: auto;                 /* ← Permite que el fondo no se estire forzado */
-    min-height: 100vh;            /* ← Asegura que al menos cubra toda la pantalla */
-    padding-bottom: 60px;         /* ← Espacio para mostrar el botón volver */
+    height: auto;               /* Se adapta al contenido */
+    min-height: 100vh;          /* Siempre al menos pantalla completa */
+    padding: 20px 0 80px;       /* Espacio inferior para el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ya no centrado vertical */
+    align-items: center;
   }
 
   .grid-servicios {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 20px 0;
+    padding: 0;
   }
 
   .boton-servicio img {
@@ -109,19 +113,34 @@ body {
   }
 
   .rayo {
-    width: 140px;
+    position: absolute;
     top: 28px;
     bottom: 28px;
-    height: calc(100% - 56px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;                   /* Tamaño más pequeño para móviles */
+    height: calc(100% - 56px);      /* Se mantiene desde línea a línea */
+    z-index: 1;
   }
 
   .volver {
-    display: block;               /* ← Asegura que siempre se vea */
+    display: block;
+    margin: 40px auto 0;
     font-size: 14px;
-    padding: 10px 20px;
-    margin: 30px auto 0;          /* ← Centrado horizontal */
+    padding: 10px 22px;
+    background-color: #003399;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+  }
+
+  .volver:hover {
+    background-color: #001f66;
   }
 }
+
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
