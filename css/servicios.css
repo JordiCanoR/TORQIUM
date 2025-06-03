@@ -48,16 +48,35 @@ body {
   filter: brightness(1.2);
 }
 
+/* RAYO VERTICAL ADAPTADO A TODAS LAS PANTALLAS */
 .rayo {
   position: absolute;
-  width: 160px; /* Aumentado desde 100px */
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  height: calc(100% - 140px); /* Ajusta este valor según el margen entre líneas doradas */
+  width: auto;
   opacity: 0;
   animation: parpadeo 1.2s ease-in-out 1 forwards;
   z-index: 1;
-  filter: drop-shadow(0 0 45px #FFD700) brightness(1.6); /* más brillante */
+  filter: drop-shadow(0 0 45px #FFD700) brightness(1.6);
+}
+
+/* Parpadeo animado del rayo */
+@keyframes parpadeo {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 @keyframes parpadeo {
