@@ -51,12 +51,12 @@ body {
 /* RAYO VERTICAL ADAPTADO A TODAS LAS PANTALLAS */
 .rayo {
   position: absolute;
-  top: 20px;
-  bottom: 20px;
+  top: 28px;              /* margen superior exacto para no tocar la línea */
+  bottom: 28px;           /* margen inferior exacto también */
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: calc(100% - 40px);
+  height: calc(100% - 56px); /* alto total menos los márgenes */
   opacity: 0;
   animation: parpadeo 2.8s ease-in-out infinite;
   z-index: 1;
