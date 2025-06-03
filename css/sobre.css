@@ -2,38 +2,47 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  color: white;
   background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   overflow: hidden;
-  text-align: center;
 }
 
-.contacto-contenido {
-  max-width: 900px;
-  padding: 0 20px;
-  line-height: 1.7;
-  transform: translateY(-10px); /* Centrado fino visual */
+.sobre-contenido {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  text-align: justify;
+  line-height: 1.8;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+  color: white;
+}
+
+.sobre-contenido p {
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+.sobre-contenido p:first-child {
+  margin-top: 0;
 }
 
 h2 {
+  text-align: center;
   font-size: 2em;
-  color: white;
   margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.1em;
   color: white;
-  margin: 10px 0;
 }
 
 strong {
   color: white;
+  font-weight: bold;
 }
 
 span {
@@ -41,16 +50,29 @@ span {
   font-weight: bold;
 }
 
+/* Énfasis en palabras clave */
+.negrita {
+  font-weight: bold;
+  color: white;
+}
+
+.dorado {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+/* Botón volver */
 .volver {
   display: inline-block;
-  margin-top: 40px;
+  margin: 30px auto 0;
   background-color: #0033aa;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .volver:hover {
@@ -59,7 +81,7 @@ span {
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
-  .contacto-contenido {
+  .sobre-contenido {
     padding: 0 15px;
     font-size: 0.95em;
   }
@@ -80,7 +102,7 @@ span {
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .contacto-contenido {
+  .sobre-contenido {
     padding: 0 30px;
   }
 
@@ -100,7 +122,7 @@ span {
 
 /* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
 @media screen and (min-width: 1024px) {
-  .contacto-contenido {
+  .sobre-contenido {
     padding: 0 20px;
   }
 
