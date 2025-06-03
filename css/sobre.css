@@ -84,8 +84,12 @@ span {
 @media screen and (max-width: 767px) {
    .sobre-contenido {
     height: 100svh;
-    padding: 0;
     justify-content: flex-end; /* mantiene el menú en su sitio */
+    padding: 20px 0 80px;       /* Espacio inferior para el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ya no centrado vertical */
+    align-items: center;
   }
   
   .volver {
@@ -98,9 +102,14 @@ span {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .sobre-contenido {
     height: 100svh;
-    padding: 0;
     justify-content: flex-end; /* mantiene el menú en su sitio */
+    padding: 20px 0 80px;       /* Espacio inferior para el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ya no centrado vertical */
+    align-items: center;
   }
+  
   
   h2 {
     font-size: 1.8em;
