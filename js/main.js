@@ -4,3 +4,11 @@ function ocultarIntro() {
   document.getElementById("pantalla-inicio").style.display = "block";
   document.body.style.overflow = "hidden";
 }
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const sonido = document.getElementById("sonidoRayo");
+    if (sonido) sonido.play().catch(() => {
+      console.log("Interacción necesaria para reproducir audio.");
+    });
+  }, 2000);
+});
