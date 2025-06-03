@@ -82,18 +82,14 @@ span {
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .sobre-contenido {
-    padding: 0 15px;
-    font-size: 0.95em;
+    height: auto;               /* Se adapta al contenido */
+    min-height: 100vh;          /* Siempre al menos pantalla completa */
+    padding: 20px 0 80px;       /* Espacio inferior para el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ya no centrado vertical */
+    align-items: center;
   }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  p {
-    font-size: 1em;
-  }
-
   .volver {
     font-size: 14px;
     padding: 10px 16px;
