@@ -13,11 +13,11 @@ body {
   text-align: center;
 }
 
-.sobre-contenido {
+.contacto-contenido {
   max-width: 900px;
   padding: 0 20px;
   line-height: 1.7;
-  transform: translateY(-10px); /* opcional para centrar visualmente mejor */
+  transform: translateY(-10px); /* Centrado fino visual */
 }
 
 h2 {
@@ -59,7 +59,7 @@ span {
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
-  .sobre-contenido {
+  .contacto-contenido {
     padding: 0 15px;
     font-size: 0.95em;
   }
@@ -80,7 +80,7 @@ span {
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .sobre-contenido {
+  .contacto-contenido {
     padding: 0 30px;
   }
 
@@ -100,7 +100,7 @@ span {
 
 /* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
 @media screen and (min-width: 1024px) {
-  .sobre-contenido {
+  .contacto-contenido {
     padding: 0 20px;
   }
 
