@@ -8,30 +8,38 @@
 </head>
 <body>
   <div class="pantalla-servicios">
-    <img src="../imagenes/rayo.png" alt="Rayo" class="rayo">
+    
+    <!-- ⚡ Rayo -->
+    <img src="../imagenes/rayo.png" alt="Rayo" class="rayo" id="rayo" />
+    <audio id="sonidoTrueno" src="../media/relampago.mp3" preload="auto"></audio>
+
     <div class="grid-servicios">
-
       <a href="#instalaciones" class="boton-servicio">
-        <img src="../imagenes/botoninstalaciones.jpg" alt="Instalaciones Eléctricas">
+        <img src="../imagenes/botoninstalaciones.jpg" alt="Instalaciones Eléctricas" />
       </a>
-
       <a href="#domotica" class="boton-servicio">
-        <img src="../imagenes/domotica.jpg" alt="Domótica">
+        <img src="../imagenes/domotica.jpg" alt="Domótica" />
       </a>
-
       <a href="#automatizacion" class="boton-servicio">
-        <img src="../imagenes/botonautomatizacionjpg.jpg" alt="Automatización">
+        <img src="../imagenes/botonautomatizacionjpg.jpg" alt="Automatización" />
       </a>
-
       <a href="#mantenimiento" class="boton-servicio">
-        <img src="../imagenes/mantenimiento.jpg" alt="Mantenimiento">
+        <img src="../imagenes/mantenimiento.jpg" alt="Mantenimiento" />
       </a>
-
     </div>
 
     <a href="../index.html" class="volver">← Volver al inicio</a>
-    <audio id="sonido-trueno" src="../media/relampago.mp3" preload="auto"></audio>
-
   </div>
+
+  <script>
+    // Reproduce el trueno al mostrar el rayo
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const sonido = document.getElementById("sonidoTrueno");
+        sonido.volume = 0.8;
+        sonido.play();
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
