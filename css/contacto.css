@@ -5,40 +5,49 @@ body {
   color: white;
   background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
   background-size: cover;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
-  text-align: center;
 }
 
 .contacto-contenido {
+  background: rgba(0, 0, 0, 0.7);
   max-width: 900px;
-  padding: 0 20px;
-  line-height: 1.7;
-  transform: translateY(-10px); /* Centrado fino visual */
+  width: 90%;
+  padding: 40px 30px;
+  text-align: center;
+  line-height: 1.8;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
 }
 
-h2 {
-  font-size: 2em;
-  color: white;
-  margin-bottom: 20px;
-}
-
-p {
+.contacto-contenido p {
+  margin: 15px 0;
+  color: #eee;
   font-size: 1.1em;
-  color: white;
-  margin: 10px 0;
 }
 
-strong {
+.contacto-contenido strong {
   color: white;
+  font-weight: 600;
 }
 
-span {
+.contacto-contenido .destacado {
   color: #ffc107;
-  font-weight: bold;
+  font-weight: 600;
+}
+
+.contacto-contenido .importante {
+  font-weight: 700;
+  color: white;
+}
+
+.contacto-contenido .gris {
+  color: #ccc;
+  font-weight: 500;
 }
 
 .volver {
@@ -46,74 +55,44 @@ span {
   margin-top: 40px;
   background-color: #0033aa;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 28px;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-size: 16px;
 }
 
 .volver:hover {
   background-color: #0055ff;
 }
 
-/* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
+/* ───────────── RESPONSIVE ───────────── */
 @media screen and (max-width: 767px) {
   .contacto-contenido {
-    padding: 0 15px;
+    padding: 30px 20px;
     font-size: 0.95em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  p {
-    font-size: 1em;
   }
 
   .volver {
     font-size: 14px;
-    padding: 10px 16px;
+    padding: 10px 20px;
   }
 }
 
-/* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .contacto-contenido {
-    padding: 0 30px;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  p {
-    font-size: 1.05em;
+    padding: 40px;
   }
 
   .volver {
     font-size: 15px;
-    padding: 12px 22px;
+    padding: 12px 24px;
   }
 }
 
-/* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
 @media screen and (min-width: 1024px) {
   .contacto-contenido {
-    padding: 0 20px;
-  }
-
-  h2 {
-    font-size: 2em;
-  }
-
-  p {
-    font-size: 1.1em;
-  }
-
-  .volver {
-    font-size: 16px;
-    padding: 12px 28px;
+    padding: 50px;
   }
 }
