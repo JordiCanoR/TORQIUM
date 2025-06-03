@@ -51,48 +51,27 @@ body {
 /* RAYO VERTICAL ADAPTADO A TODAS LAS PANTALLAS */
 .rayo {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 20px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  height: calc(100% - 140px); /* Ajusta este valor según el margen entre líneas doradas */
   width: auto;
+  height: calc(100% - 40px);
   opacity: 0;
-  animation: parpadeo 1.2s ease-in-out 1 forwards;
+  animation: parpadeo 2.8s ease-in-out infinite;
   z-index: 1;
   filter: drop-shadow(0 0 45px #FFD700) brightness(1.6);
 }
 
-/* Parpadeo animado del rayo */
 @keyframes parpadeo {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1.2);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
+  0%   { opacity: 0; transform: translateX(-50%) scale(0.8); }
+  5%   { opacity: 1; transform: translateX(-50%) scale(1.2); }
+  10%  { opacity: 0; transform: translateX(-50%) scale(1); }
+  15%  { opacity: 1; transform: translateX(-50%) scale(1.1); }
+  20%  { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-@keyframes parpadeo {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
 
 /* Botón volver */
 .volver {

@@ -33,22 +33,24 @@
     <audio id="sonidoRayo" src="../media/relampago.mp3" preload="auto"></audio>
   </div>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const rayo = document.getElementById("rayo");
-      const audio = document.getElementById("sonidoRayo");
+ <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const rayo = document.getElementById("rayo");
+    const sonido = document.getElementById("sonidoRayo");
 
-      setTimeout(() => {
-        rayo.style.opacity = 1;
-        rayo.style.animation = "parpadeo 1.2s ease-in-out 1 forwards";
-        const playAudio = () => {
-          audio.play().catch(() => {});
-          document.body.removeEventListener("click", playAudio);
-        };
-        // Activar sonido con interacción mínima
-        document.body.addEventListener("click", playAudio);
-      }, 1500);
-    });
-  </script>
+    // Activar audio tras el primer clic (requisito de los navegadores)
+    const activarSonido = () => {
+      sonido.play().catch(() => {});
+      document.removeEventListener("click", activarSonido);
+    };
+    document.addEventListener("click", activarSonido);
+
+    // Temporizador sincronizado con el primer parpadeo
+    setTimeout(() => {
+      sonido.play().catch(() => {});
+    }, 140); // sincronizado con el 5% del keyframe (0.14s aprox. de 2.8s)
+  });
+</script>
+
 </body>
 </html>
