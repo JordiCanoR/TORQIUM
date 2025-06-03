@@ -31,15 +31,20 @@
     <a href="../index.html" class="volver">← Volver al inicio</a>
   </div>
 
-  <script>
-    // Reproduce el trueno al mostrar el rayo
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const sonido = document.getElementById("sonidoTrueno");
-        sonido.volume = 0.8;
-        sonido.play();
-      }, 2000);
-    });
-  </script>
+<script>
+  function reproducirTrueno() {
+    const sonido = document.getElementById("sonidoTrueno");
+    sonido.volume = 0.9;
+    sonido.play().catch(() => {});
+    document.removeEventListener("mousemove", reproducirTrueno);
+  }
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.addEventListener("mousemove", reproducirTrueno);
+    }, 2000);
+  });
+</script>
+
 </body>
 </html>
