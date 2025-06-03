@@ -1,74 +1,107 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .contacto-contenido {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-    padding: 0 20px;
-    line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 1.7;
 }
 
 h2 {
-    font-size: 2em;
-    color: white;
-    margin-bottom: 20px;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.1em;
-    color: white;
-    margin: 10px 0;
+  font-size: 1.1em;
+  color: white;
+  margin: 10px 0;
 }
 
 strong {
-    color: white;
+  color: white;
 }
 
 span {
-    color: #ffc107;
-    font-weight: bold;
+  color: #ffc107;
+  font-weight: bold;
 }
 
 .volver {
-    display: inline-block;
-    margin-top: 40px;
-    background-color: #0033aa;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 40px;
+  background-color: #0033aa;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .volver:hover {
-    background-color: #0055ff;
+  background-color: #0055ff;
 }
 
-@media screen and (max-width: 768px) {
-    .contacto-contenido {
-        padding: 0 10px;
-        font-size: 0.95em;
-    }
+/* 📱 MÓVIL */
+@media screen and (max-width: 767px) {
+  .contacto-contenido {
+    padding: 0 10px;
+    font-size: 0.95em;
+  }
 
-    h2 {
-        font-size: 1.5em;
-    }
+  h2 {
+    font-size: 1.4em;
+  }
 
-    .volver {
-        padding: 10px 15px;
-        font-size: 0.95em;
-    }
+  .volver {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* 📲 TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .contacto-contenido {
+    padding: 0 40px;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .volver {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
+
+/* 🖥️ ESCRITORIO */
+@media screen and (min-width: 1024px) {
+  .contacto-contenido {
+    padding: 0 60px;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  .volver {
+    font-size: 1em;
+    padding: 12px 28px;
+  }
 }
