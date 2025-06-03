@@ -68,16 +68,14 @@ body {
 }
 
 /* ───────────── RESPONSIVE ───────────── */
+
 @media screen and (max-width: 767px) {
   .contacto-contenido {
-    height: auto;               /* Se adapta al contenido */
-    min-height: 100vh;          /* Siempre al menos pantalla completa */
-    padding: 20px 0 80px;       /* Espacio inferior para el botón */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ya no centrado vertical */
-    align-items: center;
+    height: 100svh;
+    padding: 0;
+    justify-content: flex-end; /* mantiene el menú en su sitio */
   }
+ 
   .volver {
     font-size: 14px;
     padding: 10px 20px;
