@@ -121,7 +121,7 @@ body {
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-inicio {
-    height: calc(100svh - 55px);
+    height: calc(90svh - 55px);
     justify-content: flex-start;
     padding-top: 5svh;
   }
