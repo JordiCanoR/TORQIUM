@@ -12,3 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }, 2000);
 });
+document.body.addEventListener('click', () => {
+  const sonido = document.getElementById("sonidoRayo");
+  if (sonido) sonido.play().catch(() => {});
+});
