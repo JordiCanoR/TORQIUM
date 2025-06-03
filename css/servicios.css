@@ -158,44 +158,34 @@ body {
   }
 }
 
-/* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
-@media screen and (min-width: 1024px) {
-  .grid-servicios {
-    gap: 40px 60px;
-  }
-
-  .boton-servicio img {
-    max-width: 380px;
-  }
-
-  .rayo {
-    width: 160px;
-  }
-}
+/* NUEVAS SECCIONES: Flota y Equipo */
 .seccion-extra {
-  width: 100%;
-  max-width: 900px;
   text-align: center;
-  margin: 60px auto 0;
+  margin-top: 40px;
+  padding: 20px;
   z-index: 2;
 }
 
 .seccion-extra h2 {
+  font-size: 28px;
   color: #ffc107;
-  font-size: 1.8em;
   margin-bottom: 20px;
 }
 
 .imagen-extra {
-  width: 100%;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
-.imagen-extra:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 40px #ffc107, 0 0 60px #ff6f00;
+/* RESPONSIVE para imagen extra */
+@media screen and (max-width: 767px) {
+  .seccion-extra h2 {
+    font-size: 22px;
+  }
+
+  .imagen-extra {
+    max-width: 95%;
+  }
 }
