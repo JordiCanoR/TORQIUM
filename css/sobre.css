@@ -6,18 +6,18 @@ body {
   background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   overflow: hidden;
+  text-align: center;
 }
 
 .sobre-contenido {
   max-width: 900px;
-  margin: auto;
-  text-align: center;
   padding: 0 20px;
   line-height: 1.7;
+  transform: translateY(-10px); /* opcional para centrar visualmente mejor */
 }
 
 h2 {
@@ -56,6 +56,7 @@ span {
 .volver:hover {
   background-color: #0055ff;
 }
+
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .sobre-contenido {
