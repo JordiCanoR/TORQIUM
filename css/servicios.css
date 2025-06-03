@@ -49,17 +49,27 @@ body {
 }
 
 /* RAYO VERTICAL ADAPTADO A TODAS LAS PANTALLAS */
-.rayo {
+/* CONTENEDOR del rayo alineado con márgenes */
+
+.contenedor-rayo {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: calc(100% - 140px); /* Ajusta este valor según el margen entre líneas doradas */
+  top: 80px;      /* separación desde línea dorada arriba */
+  bottom: 80px;   /* separación desde línea dorada abajo */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Imagen del rayo dentro del contenedor */
+.rayo {
+  max-height: 100%;  /* rellena el contenedor verticalmente */
   width: auto;
   opacity: 0;
   animation: parpadeo 1.2s ease-in-out 1 forwards;
-  z-index: 1;
   filter: drop-shadow(0 0 45px #FFD700) brightness(1.6);
 }
 
