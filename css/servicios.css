@@ -16,35 +16,6 @@ body {
   align-items: center;
   padding: 40px 20px;
   position: relative;
-  overflow: hidden;
-}
-
-/* ⚡ RAYO */
-.rayo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  opacity: 0;
-  animation: aparecerRayo 1s ease forwards;
-  animation-delay: 2s;
-  z-index: 1;
-}
-
-@keyframes aparecerRayo {
-  0% {
-    opacity: 0;
-    filter: drop-shadow(0 0 0px yellow);
-  }
-  50% {
-    opacity: 1;
-    filter: drop-shadow(0 0 30px yellow);
-  }
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 15px yellow);
-  }
 }
 
 .grid-servicios {
@@ -72,6 +43,42 @@ body {
   transform: scale(1.05);
 }
 
+/* RAYO animado */
+.rayo {
+  position: absolute;
+  width: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: parpadeo 1.2s ease-in-out 1 forwards;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px #FFD700);
+}
+
+@keyframes parpadeo {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  25% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+  75% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Centrado absoluto para escritorio */
+@media screen and (min-width: 769px) {
+  .pantalla-servicios {
+    height: 100vh;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .grid-servicios {
+    padding: 0;
+    position: relative;
+    top: -40px;
+  }
+}
+
 /* Botón volver */
 .volver {
   margin-top: 40px;
@@ -90,7 +97,7 @@ body {
   background-color: #001f66;
 }
 
-/* Responsive móvil */
+/* Responsive móvil: 1 columna */
 @media screen and (max-width: 768px) {
   .grid-servicios {
     grid-template-columns: 1fr;
@@ -108,6 +115,8 @@ body {
   }
 
   .rayo {
-    width: 100px;
+    width: 140px;
+    top: 48%;
+    filter: drop-shadow(0 0 30px #FFD700);
   }
 }
