@@ -7,44 +7,62 @@
   <link rel="stylesheet" href="../css/servicios.css" />
 </head>
 <body>
+
   <div class="pantalla-servicios">
     
-    <!-- ⚡ Rayo -->
-    <img src="../imagenes/rayo.png" alt="Rayo" class="rayo" id="rayo" />
-    <audio id="sonidoTrueno" src="../media/relampago.mp3" preload="auto"></audio>
+    <!-- RAYO -->
+    <img src="../imagenes/rayo.png" alt="Rayo" class="rayo" id="rayo">
+    
+    <!-- SONIDO -->
+    <audio id="rayo-sonido" src="../media/relampago.mp3" preload="auto"></audio>
 
     <div class="grid-servicios">
       <a href="#instalaciones" class="boton-servicio">
-        <img src="../imagenes/botoninstalaciones.jpg" alt="Instalaciones Eléctricas" />
+        <img src="../imagenes/botoninstalaciones.jpg" alt="Instalaciones Eléctricas">
       </a>
+
       <a href="#domotica" class="boton-servicio">
-        <img src="../imagenes/domotica.jpg" alt="Domótica" />
+        <img src="../imagenes/domotica.jpg" alt="Domótica">
       </a>
+
       <a href="#automatizacion" class="boton-servicio">
-        <img src="../imagenes/botonautomatizacionjpg.jpg" alt="Automatización" />
+        <img src="../imagenes/botonautomatizacionjpg.jpg" alt="Automatización">
       </a>
+
       <a href="#mantenimiento" class="boton-servicio">
-        <img src="../imagenes/mantenimiento.jpg" alt="Mantenimiento" />
+        <img src="../imagenes/mantenimiento.jpg" alt="Mantenimiento">
       </a>
     </div>
 
     <a href="../index.html" class="volver">← Volver al inicio</a>
   </div>
 
-<script>
-  function reproducirTrueno() {
-    const sonido = document.getElementById("sonidoTrueno");
-    sonido.volume = 0.9;
-    sonido.play().catch(() => {});
-    document.removeEventListener("mousemove", reproducirTrueno);
-  }
+  <script>
+    // Reproduce sonido y muestra el rayo con retardo
+    window.addEventListener('DOMContentLoaded', () => {
+      const rayo = document.getElementById('rayo');
+      const sonido = document.getElementById('rayo-sonido');
 
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.addEventListener("mousemove", reproducirTrueno);
-    }, 2000);
-  });
-</script>
+      setTimeout(() => {
+        rayo.style.animationPlayState = 'running';
+        sonido.volume = 1.0;
+
+        // Reproduce el sonido si es posible directamente
+        const playPromise = sonido.play();
+
+        // Si no es posible (por autoplay policies), espera la interacción del usuario
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            const activarSonido = () => {
+              sonido.play();
+              document.removeEventListener('click', activarSonido);
+            };
+            document.addEventListener('click', activarSonido);
+          });
+        }
+      }, 2000);
+    });
+  </script>
 
 </body>
 </html>
