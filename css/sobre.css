@@ -80,37 +80,55 @@ span {
 }
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
-
 @media screen and (max-width: 767px) {
-   .sobre-contenido {
-    height: 100svh;
-    justify-content: flex-end; /* mantiene el menú en su sitio */
-    padding: 20px 0 80px;       /* Espacio inferior para el botón */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ya no centrado vertical */
+  body {
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .sobre-contenido {
+    padding: 30px 20px;
+    margin: 40px auto;
+    height: auto;
+    display: block;
+    justify-content: center;
     align-items: center;
   }
-  
+
   .volver {
     font-size: 14px;
     padding: 10px 20px;
+    margin-top: 30px;
   }
 }
 
+
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+ body {
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   .sobre-contenido {
-    height: 100svh;
-    justify-content: flex-end; /* mantiene el menú en su sitio */
-    padding: 20px 0 80px;       /* Espacio inferior para el botón */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ya no centrado vertical */
+    padding: 30px 20px;
+    margin: 40px auto;
+    height: auto;
+    display: block;
+    justify-content: center;
     align-items: center;
   }
-  
-  
+
+  .volver {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+
   h2 {
     font-size: 1.8em;
   }
