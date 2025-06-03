@@ -92,6 +92,12 @@ body {
 }
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
+  .pantalla-servicios {
+    height: auto;                 /* ← Permite que el fondo no se estire forzado */
+    min-height: 100vh;            /* ← Asegura que al menos cubra toda la pantalla */
+    padding-bottom: 60px;         /* ← Espacio para mostrar el botón volver */
+  }
+
   .grid-servicios {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -103,14 +109,17 @@ body {
   }
 
   .rayo {
-    width: 180px;
-    top: 52%;
+    width: 140px;
+    top: 28px;
+    bottom: 28px;
+    height: calc(100% - 56px);
   }
 
   .volver {
+    display: block;               /* ← Asegura que siempre se vea */
     font-size: 14px;
     padding: 10px 20px;
-    margin-top: 30px;
+    margin: 30px auto 0;          /* ← Centrado horizontal */
   }
 }
 
