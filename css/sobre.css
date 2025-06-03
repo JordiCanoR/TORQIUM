@@ -14,7 +14,7 @@ body {
 
 .sobre-contenido {
   max-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
   padding: 40px 30px;
   text-align: justify;
   line-height: 1.8;
@@ -22,6 +22,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sobre-contenido p {
@@ -50,7 +54,6 @@ span {
   font-weight: bold;
 }
 
-/* Énfasis en palabras clave */
 .negrita {
   font-weight: bold;
   color: white;
@@ -61,10 +64,9 @@ span {
   font-weight: bold;
 }
 
-/* Botón volver */
 .volver {
   display: inline-block;
-  margin: 30px auto 0;
+  margin-top: 30px;
   background-color: #0033aa;
   color: white;
   padding: 12px 24px;
@@ -82,53 +84,37 @@ span {
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   body {
-    height: auto;
-    min-height: 100vh;
-    padding-bottom: 60px
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100svh;
+    padding: 0;
   }
 
   .sobre-contenido {
+    height: 100svh;
     padding: 30px 20px;
-    margin: 40px auto;
-    height: auto;
-    display: block;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    overflow-y: auto;
   }
 
   .volver {
     font-size: 14px;
     padding: 10px 20px;
-    margin-top: 30px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
 
-
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
- body {
-    height: auto;
-    min-height: 100vh;
-    padding-bottom: 60px
-    background-size: cover;
-    background-attachment: fixed;
-  }
-
   .sobre-contenido {
     padding: 30px 20px;
-    margin: 40px auto;
-    height: auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .volver {
-    font-size: 14px;
-    padding: 10px 20px;
-    margin-top: 30px;
   }
 
   h2 {
