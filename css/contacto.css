@@ -57,126 +57,63 @@ span {
   background-color: #0055ff;
 }
 
-/* 📱 MÓVIL */
+/* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .contacto-contenido {
-    padding: 0 10px;
+    padding: 0 15px;
     font-size: 0.95em;
   }
 
   h2 {
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
-  .volver {
-    font-size: 0.9em;
-    padding: 8px 16px;
-  }
-}
-
-/* 📲 TABLET */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .contacto-contenido {
-    padding: 0 40px;
-  }
-
-  h2 {
-    font-size: 1.7em;
-  }
-
-  .volver {
+  p {
     font-size: 1em;
-    padding: 10px 20px;
-  }
-}
-
-/* 🖥️ ESCRITORIO */
-@media screen and (min-width: 1024px) {
-  .contacto-contenido {
-    padding: 0 60px;
-  }
-
-  h2 {
-    font-size: 2.2em;
-  }
-
-  .volver {
-    font-size: 1em;
-    padding: 12px 28px;
-  }
-}
-/* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
-@media screen and (max-width: 767px) {
-  .pantalla-inicio {
-    height: calc(100svh - 55px);
-    justify-content: flex-start;
-    padding-top: 5svh;
-  }
-
-  .contenido-secundario {
-    padding: 20px;
-    font-size: 14px;
-  }
-
-  .campo-contacto h2 {
-    font-size: 16px;
-  }
-
-  .campo-contacto p,
-  .campo-contacto a {
-    font-size: 14px;
-    word-break: break-word;
   }
 
   .volver {
     font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  .menu-inferior {
-    gap: 25px;
-    font-size: 13px;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-
-  #intro-video video {
-    width: 100vw;
-    max-height: 85svh;
+    padding: 10px 16px;
   }
 }
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .pantalla-inicio {
-    padding-bottom: 70px;
+  .contacto-contenido {
+    padding: 0 30px;
   }
 
-  .menu-inferior {
-    gap: 30px;
-    font-size: 15px;
-    padding: 14px;
+  h2 {
+    font-size: 1.8em;
   }
 
-  .skip-intro {
+  p {
+    font-size: 1.05em;
+  }
+
+  .volver {
     font-size: 15px;
-    padding: 10px 22px;
+    padding: 12px 22px;
   }
 }
 
 /* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
 @media screen and (min-width: 1024px) {
-  .pantalla-inicio {
-    padding-bottom: 60px;
+  .contacto-contenido {
+    padding: 0 20px;
   }
 
-  .menu-inferior {
-    gap: 40px;
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .volver {
     font-size: 16px;
-    padding: 16px 0;
+    padding: 12px 28px;
   }
 }
