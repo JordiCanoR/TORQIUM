@@ -56,4 +56,78 @@ span {
 .volver:hover {
   background-color: #0055ff;
 }
+/* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
+@media screen and (max-width: 767px) {
+  .pantalla-inicio {
+    height: calc(100svh - 55px);
+    justify-content: flex-start;
+    padding-top: 5svh;
+  }
 
+  .contenido-secundario {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .campo-contacto h2 {
+    font-size: 16px;
+  }
+
+  .campo-contacto p,
+  .campo-contacto a {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .menu-inferior {
+    gap: 25px;
+    font-size: 13px;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  #intro-video video {
+    width: 100vw;
+    max-height: 85svh;
+  }
+}
+
+/* ───────────── RESPONSIVE: TABLETS ───────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pantalla-inicio {
+    padding-bottom: 70px;
+  }
+
+  .menu-inferior {
+    gap: 30px;
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .skip-intro {
+    font-size: 15px;
+    padding: 10px 22px;
+  }
+}
+
+/* ───────────── RESPONSIVE: PC Y PORTÁTILES ───────────── */
+@media screen and (min-width: 1024px) {
+  .pantalla-inicio {
+    padding-bottom: 60px;
+  }
+
+  .menu-inferior {
+    gap: 40px;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+}
