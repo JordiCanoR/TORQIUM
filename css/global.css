@@ -20,7 +20,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100svh;
+  height: 100vh;
   background: black;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
 #intro-video video {
   width: 90vw;
   height: auto;
-  max-height: 90svh;
+  max-height: 90vh;
   object-fit: contain;
 }
 
@@ -39,24 +39,27 @@ body {
   position: absolute;
   bottom: 20px;
   background: #003cff;
+  color: white;
   border: none;
   padding: 12px 28px;
   font-weight: bold;
   border-radius: 25px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 60, 255, 0.4);
+  transition: all 0.2s ease;
   z-index: 11;
 }
 
 .skip-intro:hover {
   transform: scale(1.05);
+  background: #0052ff;
+  box-shadow: 0 6px 18px rgba(0, 60, 255, 0.6);
 }
 
 /* ───────────── CONTENIDO PRINCIPAL ───────────── */
 #contenido {
-  height: 100svh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -74,7 +77,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 60px; /* deja espacio para el menú azul */
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 
@@ -88,84 +91,82 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  box-shadow: 0 -2px 10px rgba(0, 51, 160, 0.5);
 }
 
 .menu-inferior a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size: 15px;
   transition: all 0.2s ease-in-out;
 }
 
 .menu-inferior a:hover {
   text-decoration: underline;
   transform: scale(1.05);
+  color: #ffd60a;
 }
 
-/* ───────────── BOTÓN VOLVER ───────────── */
+/* ───────────── BOTÓN VOLVER UNIVERSAL ───────────── */
 .volver {
   display: inline-block;
   margin-top: 30px;
   background-color: #003399;
   color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 51, 153, 0.4);
 }
 
 .volver:hover {
   background-color: #001f66;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 51, 153, 0.6);
 }
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
-.pantalla-inicio {
-  background-size: contain; /* en lugar de cover */
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media screen and (max-width: 767px) {
   .pantalla-inicio {
-    height: 100svh;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
     padding: 0;
-    justify-content: flex-end; /* mantiene el menú en su sitio */
-  }
-}
-.menu-inferior {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-  .contenido-secundario {
-    padding: 20px;
-    font-size: 14px;
+    justify-content: flex-end;
   }
 
-  .campo-contacto h2 {
-    font-size: 16px;
+  .menu-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    gap: 1.2rem;
+    padding: 10px 0;
+    font-size: 13px;
   }
 
-  .campo-contacto p,
-  .campo-contacto a {
-    font-size: 14px;
-    word-break: break-word;
+  .menu-inferior a {
+    font-size: 13px;
   }
 
   .volver {
-    font-size: 14px;
-    padding: 8px 16px;
+    font-size: 13px;
+    padding: 10px 22px;
   }
 
- 
-
   #intro-video video {
-    width: 100vw;
-    max-height: 85svh;
+    width: 95vw;
+    max-height: 85vh;
+  }
+
+  .skip-intro {
+    font-size: 14px;
+    padding: 10px 22px;
   }
 }
 
@@ -176,14 +177,23 @@ body {
   }
 
   .menu-inferior {
-    gap: 30px;
-    font-size: 15px;
-    padding: 14px;
+    gap: 2.5rem;
+    font-size: 14px;
+    padding: 13px 0;
+  }
+
+  .menu-inferior a {
+    font-size: 14px;
   }
 
   .skip-intro {
     font-size: 15px;
-    padding: 10px 22px;
+    padding: 11px 24px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 11px 25px;
   }
 }
 
@@ -194,7 +204,26 @@ body {
   }
 
   .menu-inferior {
-    gap: 40px;
+    gap: 3rem;
+    font-size: 15px;
+    padding: 14px 0;
+  }
+
+  .volver {
+    font-size: 15px;
+    padding: 12px 28px;
+  }
+}
+
+/* ───────────── TRANSICIONES SUAVES ───────────── */
+* {
+  scroll-behavior: smooth;
+}
+
+/* ───────────── SOPORTE PARA PANTALLAS MUY GRANDES ───────────── */
+@media screen and (min-width: 1920px) {
+  .menu-inferior {
+    gap: 4rem;
     font-size: 16px;
     padding: 16px 0;
   }

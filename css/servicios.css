@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px 20px;
+  padding: 60px 20px 40px;
   margin: 0;
   position: relative;
   overflow-x: hidden;
@@ -23,12 +23,13 @@ body {
 .grid-servicios {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px 60px;
+  gap: 35px 50px;
   max-width: 900px;
   width: 100%;
   justify-items: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 20px 0;
+  margin-top: 20px;
   z-index: 2;
 }
 
@@ -76,22 +77,23 @@ body {
 .seccion-extra {
   width: 100%;
   max-width: 1200px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 30, 60, 0.9) 100%);
-  padding: 60px 40px;
-  margin-top: 60px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 30, 60, 0.92) 100%);
+  padding: 50px 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
   text-align: center;
   z-index: 2;
   position: relative;
   border-radius: 15px;
   border: 2px solid #ffc107;
-  box-shadow: 0 10px 40px rgba(255, 193, 7, 0.3);
+  box-shadow: 0 10px 40px rgba(255, 193, 7, 0.35);
 }
 
 .seccion-extra h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #ffc107;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
@@ -101,7 +103,7 @@ body {
 .grid-equipo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 35px;
   max-width: 1100px;
   margin: 0 auto;
   align-items: center;
@@ -110,16 +112,16 @@ body {
 .contenedor-imagen {
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease;
   background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
+  padding: 18px;
   border: 2px solid transparent;
 }
 
 .contenedor-imagen:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 15px 40px rgba(255, 193, 7, 0.5);
   border-color: #ffc107;
 }
@@ -127,7 +129,7 @@ body {
 .imagen-extra {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: transform 0.4s ease;
   display: block;
 }
@@ -139,15 +141,15 @@ body {
 /* Etiqueta sobre cada imagen */
 .etiqueta-imagen {
   position: absolute;
-  top: 35px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, #003399, #0066ff);
   color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
+  padding: 10px 26px;
+  border-radius: 25px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   box-shadow: 0 4px 20px rgba(0, 51, 153, 0.6);
   z-index: 3;
   text-transform: uppercase;
@@ -156,15 +158,15 @@ body {
 
 /* Botón volver */
 .volver {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   background-color: #003399;
   color: white;
-  padding: 14px 35px;
+  padding: 13px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   transition: all 0.3s ease;
   z-index: 3;
   display: inline-block;
@@ -180,62 +182,69 @@ body {
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-servicios {
-    padding: 20px 15px 80px;
+    padding: 30px 15px 60px;
   }
 
   .grid-servicios {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px 0;
+    gap: 25px;
+    padding: 15px 0;
+    margin-top: 10px;
   }
 
   .boton-servicio img {
-    max-width: 90vw;
+    max-width: 85vw;
   }
 
   .rayo {
-    width: 120px;
+    width: 100px;
   }
 
   .seccion-extra {
-    padding: 40px 20px;
-    margin-top: 40px;
+    padding: 35px 18px;
+    margin-top: 35px;
+    margin-bottom: 20px;
     border-radius: 10px;
   }
 
   .seccion-extra h2 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+    letter-spacing: 1.5px;
   }
 
   .grid-equipo {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .contenedor-imagen {
-    padding: 15px;
+    padding: 14px;
   }
 
   .etiqueta-imagen {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    top: 25px;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    top: 22px;
   }
 
   .volver {
-    font-size: 14px;
-    padding: 12px 25px;
-    margin: 30px auto 30px;
+    font-size: 13px;
+    padding: 11px 22px;
+    margin: 25px auto 20px;
   }
 }
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pantalla-servicios {
+    padding: 40px 20px 50px;
+  }
+
   .grid-servicios {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 40px;
+    gap: 28px 35px;
+    margin-top: 15px;
   }
 
   .boton-servicio img {
@@ -243,36 +252,51 @@ body {
   }
 
   .rayo {
-    width: 180px;
+    width: 160px;
   }
 
   .seccion-extra {
-    padding: 50px 30px;
+    padding: 45px 28px;
+    margin-top: 45px;
   }
 
   .seccion-extra h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     letter-spacing: 2px;
+    margin-bottom: 35px;
   }
 
   .grid-equipo {
-    gap: 30px;
+    gap: 28px;
     max-width: 900px;
   }
 
   .etiqueta-imagen {
-    font-size: 1rem;
-    padding: 10px 25px;
+    font-size: 0.95rem;
+    padding: 9px 23px;
+  }
+
+  .volver {
+    font-size: 14px;
+    padding: 12px 28px;
   }
 }
 
 /* ───────────── RESPONSIVE: PC GRANDES ───────────── */
 @media screen and (min-width: 1024px) {
+  .pantalla-servicios {
+    padding: 70px 20px 50px;
+  }
+
   .boton-servicio img {
     max-width: 380px;
   }
 
   .rayo {
     width: 200px;
+  }
+
+  .grid-servicios {
+    margin-top: 25px;
   }
 }

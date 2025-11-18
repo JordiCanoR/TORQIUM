@@ -19,14 +19,14 @@ body {
 .pantalla-proyectos {
   min-height: 100vh;
   background: linear-gradient(180deg, #000814 0%, #001d3d 100%);
-  padding: 60px 20px 100px;
+  padding: 60px 20px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .titulo-proyectos {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #ffd60a;
   text-align: center;
@@ -36,11 +36,11 @@ body {
 }
 
 .subtitulo-proyectos {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 300;
   color: #ccc;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   animation: fadeInUp 0.8s ease;
 }
 
@@ -48,10 +48,10 @@ body {
 .grid-proyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 28px;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 /* ───────────── TARJETA DE PROYECTO ───────────── */
@@ -65,7 +65,7 @@ body {
 }
 
 .tarjeta-proyecto:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   border-color: #003cff;
   box-shadow: 0 10px 30px rgba(0, 60, 255, 0.4);
 }
@@ -73,7 +73,7 @@ body {
 .imagen-proyecto {
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 240px;
   overflow: hidden;
   background-color: #111;
 }
@@ -112,8 +112,8 @@ body {
   background: #ffd60a;
   color: #000;
   border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
+  padding: 11px 28px;
+  font-size: 0.95rem;
   font-weight: 600;
   border-radius: 25px;
   cursor: pointer;
@@ -129,18 +129,18 @@ body {
 
 /* ───────────── INFO DEL PROYECTO ───────────── */
 .info-proyecto {
-  padding: 20px;
+  padding: 18px;
 }
 
 .info-proyecto h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #ffd60a;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .info-proyecto .tipo {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #aaa;
   font-weight: 300;
 }
@@ -154,7 +154,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.92);
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease;
@@ -162,11 +162,11 @@ body {
 
 .modal-contenido {
   background: linear-gradient(135deg, #001d3d 0%, #000814 100%);
-  padding: 40px;
+  padding: 38px;
   border-radius: 15px;
   max-width: 800px;
   width: 90%;
-  max-height: 90vh;
+  max-height: 88vh;
   overflow-y: auto;
   position: relative;
   border: 2px solid #003cff;
@@ -176,10 +176,10 @@ body {
 
 .cerrar {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 12px;
+  right: 22px;
   color: #ffd60a;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -192,33 +192,33 @@ body {
 
 .modal-contenido h2 {
   color: #ffd60a;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 1.9rem;
+  margin-bottom: 9px;
 }
 
 .tipo-modal {
   color: #aaa;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
   font-weight: 300;
 }
 
 .imagen-modal {
   width: 100%;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 18px 0;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .video-modal {
   width: 100%;
   border-radius: 10px;
-  margin: 20px 0;
+  margin: 18px 0;
 }
 
 .descripcion-modal {
   color: #ddd;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   text-align: justify;
 }
@@ -226,14 +226,14 @@ body {
 /* ───────────── BOTÓN VOLVER ───────────── */
 .volver {
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 35px;
   background-color: #003399;
   color: white;
-  padding: 14px 35px;
+  padding: 13px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 51, 153, 0.4);
 }
@@ -246,60 +246,38 @@ body {
 
 /* ───────────── ANIMACIONES ───────────── */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-proyectos {
-    padding: 40px 15px 80px;
+    padding: 35px 15px 70px;
   }
 
   .titulo-proyectos {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .subtitulo-proyectos {
-    font-size: 1rem;
-    margin-bottom: 30px;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
   }
 
   .grid-proyectos {
@@ -312,36 +290,58 @@ body {
   }
 
   .info-proyecto h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .modal-contenido {
-    padding: 30px 20px;
+    padding: 28px 18px;
     width: 95%;
   }
 
   .modal-contenido h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .descripcion-modal {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .volver {
-    padding: 12px 25px;
+    padding: 11px 23px;
+    font-size: 0.85rem;
+  }
+
+  .btn-ver {
+    padding: 10px 24px;
     font-size: 0.9rem;
   }
 }
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pantalla-proyectos {
+    padding: 50px 18px 75px;
+  }
+
   .grid-proyectos {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
   .titulo-proyectos {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+
+  .subtitulo-proyectos {
+    font-size: 1.05rem;
+  }
+
+  .imagen-proyecto {
+    height: 220px;
+  }
+
+  .modal-contenido {
+    padding: 32px 25px;
   }
 }
 
@@ -354,7 +354,7 @@ body {
 
 /* ───────────── SCROLL PERSONALIZADO ───────────── */
 .modal-contenido::-webkit-scrollbar {
-  width: 10px;
+  width: 9px;
 }
 
 .modal-contenido::-webkit-scrollbar-track {
@@ -371,22 +371,19 @@ body {
   background: #0052ff;
 }
 
-
-/* ───────────── MEJORAS NUEVAS (SIN TOCAR LO ANTERIOR) ───────────── */
-
-/* Botón dentro del modal para ver la página completa del proyecto IA */
+/* ───────────── MEJORAS PROYECTO IA ───────────── */
 .btn-detalle-completo {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 12px 28px;
+  margin-top: 1.4rem;
+  padding: 11px 26px;
   border-radius: 999px;
   background: linear-gradient(90deg, #ffd60a, #ffed4e);
   color: #000;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   text-decoration: none;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: all 0.2s ease;
   box-shadow: 0 4px 15px rgba(255, 214, 10, 0.45);
 }
 
@@ -396,32 +393,30 @@ body {
   background: linear-gradient(90deg, #ffed4e, #fff3a1);
 }
 
-/* Contenedor de detalle de proyecto IA en la página sistema-ia-predictivo.html */
 .detalle-proyecto-ia {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.8rem;
   width: 100%;
   max-width: 1100px;
 }
 
-/* Bloques de contenido de la página IA */
 .bloque-ia h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
   color: #ffd60a;
 }
 
 .bloque-ia p,
 .bloque-ia ul {
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   line-height: 1.7;
   color: #eee;
 }
 
 .bloque-ia ul {
-  margin-left: 1.2rem;
+  margin-left: 1.1rem;
   margin-top: 0.4rem;
 }
 
@@ -429,27 +424,25 @@ body {
   margin-bottom: 0.3rem;
 }
 
-/* Caja para mostrar el esquema de arquitectura */
 .arquitectura-ia {
-  margin: 1rem 0;
-  padding: 1rem 1.2rem;
+  margin: 0.9rem 0;
+  padding: 0.9rem 1.1rem;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(0, 60, 255, 0.4);
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
-/* Grid de funcionalidades IA */
 .grid-funciones-ia {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 1.4rem;
+  margin-top: 0.9rem;
 }
 
 .card-funcion-ia {
-  padding: 1.2rem;
+  padding: 1.1rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -459,42 +452,39 @@ body {
 .card-funcion-ia h3 {
   margin-bottom: 0.5rem;
   color: #ffd60a;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .card-funcion-ia p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #ddd;
 }
 
-/* Vídeo principal de la página IA */
 .video-ia {
   width: 100%;
   max-width: 720px;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin-top: 0.9rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* Zona de botones al final de la página IA */
 .acciones-ia {
-  margin-top: 2.5rem;
+  margin-top: 2.3rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.9rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Botón de contacto específico para IA */
 .btn-contacto-ia {
   display: inline-block;
   background-color: #003399;
   color: #fff;
-  padding: 12px 28px;
+  padding: 11px 26px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 51, 153, 0.5);
 }
@@ -505,14 +495,13 @@ body {
   box-shadow: 0 6px 22px rgba(0, 51, 153, 0.7);
 }
 
-/* Ajustes responsive para la página IA */
 @media screen and (max-width: 767px) {
   .detalle-proyecto-ia {
     padding: 0 5px;
   }
 
   .bloque-ia h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .grid-funciones-ia {
