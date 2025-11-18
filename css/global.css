@@ -142,10 +142,9 @@ body {
 /* ───────────── RESPONSIVE: SMARTPHONES VERTICAL ───────────── */
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .pantalla-inicio {
-    background-size: contain;
-    background-position: center top;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-color: black;
     height: 100vh;
     padding: 0 0 60px 0;
     justify-content: flex-end;
@@ -157,13 +156,15 @@ body {
     left: 0;
     width: 100%;
     z-index: 10;
-    gap: 0.8rem;
-    padding: 12px 0;
-    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 12px 5px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
   }
 
   .menu-inferior a {
-    font-size: 12px;
+    font-size: 11px;
+    white-space: nowrap;
   }
 
   .volver {
@@ -231,12 +232,12 @@ body {
     left: 0;
     width: 100%;
     z-index: 10;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 8px 0;
   }
 
   .menu-inferior a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   /* VIDEO EN HORIZONTAL */
