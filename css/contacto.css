@@ -3,18 +3,19 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: white;
-  background: url('../imagenes/fondometal.jpg') no-repeat center center fixed;
+  background: url('../imagenes/fondometal.jpg') no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .contacto-contenido {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.85);
   max-width: 900px;
   width: 90%;
   padding: 40px 30px;
@@ -67,25 +68,28 @@ body {
   background-color: #0055ff;
 }
 
-/* ───────────── RESPONSIVE ───────────── */
-@media screen and (max-width: 767px) {
-  html, body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* ───────────── RESPONSIVE: SMARTPHONES VERTICAL ───────────── */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    min-height: 100vh;
+    height: auto;
   }
 
   .contacto-contenido {
     width: 95%;
-    max-height: 90vh;
+    max-height: 85vh;
     overflow-y: auto;
-    padding: 30px 20px;
+    padding: 25px 20px;
     box-sizing: border-box;
   }
 
+  .contacto-contenido p {
+    font-size: 0.95em;
+  }
+
   .volver {
     font-size: 14px;
     padding: 10px 20px;
@@ -93,21 +97,44 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* ───────────── RESPONSIVE: SMARTPHONES HORIZONTAL ───────────── */
+@media screen and (max-width: 900px) and (orientation: landscape) {
   body {
-    height: auto;
-    min-height: 100vh;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center center;
+    background-attachment: scroll;
+    min-height: 100vh;
   }
 
   .contacto-contenido {
-    padding: 30px 20px;
-    margin: 40px auto;
-    height: auto;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    width: 85%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 20px 25px;
+  }
+
+  .contacto-contenido p {
+    font-size: 0.9em;
+  }
+
+  .volver {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}
+
+/* ───────────── RESPONSIVE: TABLETS ───────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  .contacto-contenido {
+    padding: 30px 25px;
+    width: 85%;
   }
 
   .volver {
@@ -117,7 +144,14 @@ body {
   }
 }
 
+/* ───────────── RESPONSIVE: PC ───────────── */
 @media screen and (min-width: 1024px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
   .contacto-contenido {
     padding: 50px;
   }
