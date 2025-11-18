@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema IA Predictivo - TORQIUM</title>
+  <link rel="stylesheet" href="../css/proyectos.css" />
+</head>
+<body>
+  <div class="pantalla-proyectos">
+    <h1 class="titulo-proyectos">Sistema IA Predictivo</h1>
+    <p class="subtitulo-proyectos">
+      Control y mantenimiento inteligente de 8 motores · PLC Siemens · IA · Flask · Snap7
+    </p>
+
+    <div class="detalle-proyecto-ia">
+
+      <!-- Bloque 1: Resumen -->
+      <section class="bloque-ia">
+        <h2>Resumen del proyecto</h2>
+        <p>
+          Este sistema integra un PLC Siemens (como tu S7-1200) con un servidor en Python (Flask) para
+          controlar y supervisar 8 motores eléctricos. La solución combina automatización clásica con
+          inteligencia artificial para anticipar fallos, optimizar mantenimientos y mejorar la seguridad
+          de la instalación.
+        </p>
+        <ul>
+          <li>Control individual y general de 8 motores.</li>
+          <li>Sensores de temperatura dedicados por motor.</li>
+          <li>Mantenimiento manual y mantenimiento inteligente por IA.</li>
+          <li>Reglas configurables por el usuario y reglas generadas automáticamente por IA.</li>
+          <li>Paradas de emergencia generales y por motor.</li>
+          <li>Registro diario automático en CSV.</li>
+          <li>Alarmas y avisos constantes (fallos, mantenimientos cumplidos o por cumplir).</li>
+          <li>Control por voz y por pantalla táctil.</li>
+          <li>Supervisión y avisos gestionados por algoritmos de IA.</li>
+        </ul>
+      </section>
+
+      <!-- Bloque 2: Arquitectura -->
+      <section class="bloque-ia">
+        <h2>Arquitectura del sistema</h2>
+        <p>
+          La arquitectura se basa en la comunicación entre el PLC Siemens y un servidor en Python mediante
+          la librería Snap7. Este servidor expone una API REST que permite al frontend web consultar estados,
+          enviar órdenes y recibir predicciones de la IA.
+        </p>
+        <div class="arquitectura-ia">
+          <p><strong>PLC Siemens</strong> ⇄ Snap7 ⇄ <strong>Servidor Flask (API REST)</strong> ⇄ Modelos IA ⇄ <strong>Frontend web</strong></p>
+        </div>
+        <p>
+          El sistema registra los datos de funcionamiento de los motores, analiza el historial con modelos
+          de machine learning y genera predicciones de mantenimiento, además de disparar alarmas cuando
+          detecta comportamientos anómalos.
+        </p>
+      </section>
+
+      <!-- Bloque 3: Funcionalidades clave -->
+      <section class="bloque-ia">
+        <h2>Funcionalidades clave</h2>
+        <div class="grid-funciones-ia">
+          <div class="card-funcion-ia">
+            <h3>Control de 8 motores</h3>
+            <p>
+              Encendido, apagado y modos de funcionamiento por motor, con posibilidad de automatizar reglas
+              de arranque y parada según horarios, temperaturas o condiciones de proceso.
+            </p>
+          </div>
+          <div class="card-funcion-ia">
+            <h3>Mantenimiento predictivo</h3>
+            <p>
+              Los datos de uso y temperatura se registran y procesan mediante modelos de IA para estimar
+              cuándo conviene realizar el mantenimiento antes de que aparezcan fallos críticos.
+            </p>
+          </div>
+          <div class="card-funcion-ia">
+            <h3>Alarmas avanzadas</h3>
+            <p>
+              El sistema genera alarmas por sobretemperatura, tiempos excesivos de funcionamiento, paradas
+              inesperadas o incumplimiento de mantenimientos programados, con avisos en pantalla y por voz.
+            </p>
+          </div>
+          <div class="card-funcion-ia">
+            <h3>Registro y trazabilidad</h3>
+            <p>
+              Cada día se genera un CSV con el estado de los motores, incidencias, temperaturas y acciones
+              realizadas. Esto permite llevar un histórico detallado para auditorías o análisis posteriores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloque 4: Interfaz de usuario -->
+      <section class="bloque-ia">
+        <h2>Interfaz de usuario</h2>
+        <p>
+          El panel de control web permite visualizar el estado de los 8 motores, consultar temperaturas,
+          ver alertas activas y revisar las recomendaciones de la IA. Además, el control por voz simplifica
+          la operación en entornos industriales donde el operador no siempre puede usar teclado o ratón.
+        </p>
+        <p>
+          La interfaz está pensada para ser clara, rápida y usable en pantallas táctiles industriales.
+        </p>
+      </section>
+
+      <!-- Bloque 5: Valor para la industria -->
+      <section class="bloque-ia">
+        <h2>Valor para la industria</h2>
+        <p>
+          Este proyecto demuestra cómo la combinación de PLCs clásicos con inteligencia artificial y
+          servicios web puede transformar el mantenimiento industrial, pasando de un modelo reactivo
+          (reparar cuando se rompe) a un modelo predictivo e inteligente que reduce paradas, mejora la
+          seguridad y optimiza recursos.
+        </p>
+      </section>
+
+      <!-- Bloque 6: Multimedia -->
+      <section class="bloque-ia">
+        <h2>Demostración en vídeo</h2>
+        <p>Puedes ver una demostración real del sistema en funcionamiento:</p>
+        <video controls class="video-ia">
+          <source src="../media/sistema-ia-predictivo.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de vídeo.
+        </video>
+      </section>
+
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="acciones-ia">
+      <a href="proyectos.html" class="volver">← Volver a Proyectos</a>
+      <a href="contacto.html" class="btn-contacto-ia">Solicitar más información</a>
+    </div>
+  </div>
+</body>
+</html>

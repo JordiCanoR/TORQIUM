@@ -97,6 +97,20 @@
         </div>
       </div>
 
+      <!-- PROYECTO 7: SISTEMA IA PREDICTIVO -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto-ia-predictivo.jpg" alt="Sistema IA Predictivo" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(7)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Sistema IA Predictivo</h3>
+          <p class="tipo">PLC + IA + Flask + Snap7</p>
+        </div>
+      </div>
+
     </div>
 
     <!-- Botón volver -->
@@ -157,6 +171,13 @@
         descripcion: "Proyecto integral de automatización con PLC y SCADA. Comunicación bidireccional, control distribuido y supervisión centralizada.",
         imagen: "../imagenes/proyecto6.jpg",
         video: ""
+      },
+      7: {
+        titulo: "Sistema IA Predictivo",
+        tipo: "PLC + IA + Flask + Snap7",
+        descripcion: "Sistema avanzado que integra un PLC Siemens con un servidor en Python (Flask) para controlar y supervisar 8 motores eléctricos. Incluye sensores de temperatura por motor, mantenimiento manual e inteligente, reglas definidas por el usuario y reglas creadas por IA, registro diario en CSV, alarmas y avisos constantes, control por voz y pantalla táctil, y supervisión global gestionada por inteligencia artificial.",
+        imagen: "../imagenes/proyecto-ia-predictivo.jpg",
+        video: "../media/sistema-ia-predictivo.mp4" // deja vacío si aún no tienes el vídeo
       }
     };
 
@@ -168,6 +189,7 @@
         <img src="${proyecto.imagen}" alt="${proyecto.titulo}" class="imagen-modal" />
         <p class="descripcion-modal">${proyecto.descripcion}</p>
         ${proyecto.video ? `<video controls class="video-modal"><source src="${proyecto.video}" type="video/mp4"></video>` : ''}
+        ${id === 7 ? `<a href="sistema-ia-predictivo.html" class="btn-detalle-completo">Ver proyecto completo</a>` : ''}
       `;
       document.getElementById('contenido-modal').innerHTML = contenido;
       document.getElementById('modal').style.display = 'flex';
