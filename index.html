@@ -3,8 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TORQIUM - Automatización</title>
+  <title>TORQIUM - Automatización Industrial</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/global.css" />
+
+  <!-- PWA y SEO -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0033a0" />
+  <meta name="description" content="TORQIUM - Servicios de automatización industrial, programación PLC con TIA Portal, sistemas SCADA, domótica y mantenimiento eléctrico" />
+  <meta name="keywords" content="automatización, PLC, SCADA, TIA Portal, WinCC, Siemens, domótica, electricidad industrial" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="TORQIUM - Automatización Industrial" />
+  <meta property="og:description" content="Especialistas en automatización industrial, PLC, SCADA y domótica" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo512.png" />
+
+  <!-- Soporte para iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TORQIUM" />
 </head>
 <body>
 
@@ -22,6 +43,7 @@
     <div class="menu-inferior">
       <a href="html/contacto.html">Contacto</a>
       <a href="html/servicios.html">Servicios</a>
+      <a href="html/proyectos.html">Proyectos</a>
       <a href="html/sobre.html">Sobre Nosotros</a>
     </div>
   </div>
@@ -34,6 +56,15 @@
 
     const video = document.querySelector("#intro-video video");
     video.onended = terminarIntro;
+
+    // Registrar Service Worker para PWA (opcional)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {
+          // Service Worker no disponible, ignorar
+        });
+      });
+    }
   </script>
 </body>
 </html>

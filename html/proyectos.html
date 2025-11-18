@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos - TORQIUM</title>
+  <link rel="stylesheet" href="../css/proyectos.css" />
+</head>
+<body>
+  <div class="pantalla-proyectos">
+    <h1 class="titulo-proyectos">Nuestros Proyectos</h1>
+    <p class="subtitulo-proyectos">Automatización Industrial | TIA Portal | SCADA</p>
+
+    <div class="grid-proyectos">
+      
+      <!-- PROYECTO 1 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto1.jpg" alt="Proyecto TIA Portal 1" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(1)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Sistema de Control PLC</h3>
+          <p class="tipo">TIA Portal - S7-1500</p>
+        </div>
+      </div>
+
+      <!-- PROYECTO 2 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto2.jpg" alt="Proyecto SCADA 1" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(2)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Supervisión SCADA</h3>
+          <p class="tipo">WinCC - HMI</p>
+        </div>
+      </div>
+
+      <!-- PROYECTO 3 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto3.jpg" alt="Proyecto TIA Portal 2" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(3)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Automatización Industrial</h3>
+          <p class="tipo">TIA Portal - Ladder</p>
+        </div>
+      </div>
+
+      <!-- PROYECTO 4 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto4.jpg" alt="Proyecto SCADA 2" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(4)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Monitoreo en Tiempo Real</h3>
+          <p class="tipo">SCADA - OPC-DA</p>
+        </div>
+      </div>
+
+      <!-- PROYECTO 5 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto5.jpg" alt="Proyecto TIA Portal 3" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(5)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Sistema de Mezclado</h3>
+          <p class="tipo">TIA Portal - SCL</p>
+        </div>
+      </div>
+
+      <!-- PROYECTO 6 -->
+      <div class="tarjeta-proyecto">
+        <div class="imagen-proyecto">
+          <img src="../imagenes/proyecto6.jpg" alt="Proyecto Integración" />
+          <div class="overlay">
+            <button class="btn-ver" onclick="abrirModal(6)">Ver Detalles</button>
+          </div>
+        </div>
+        <div class="info-proyecto">
+          <h3>Integración Completa</h3>
+          <p class="tipo">TIA Portal + SCADA</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón volver -->
+    <a href="../index.html" class="volver">← Volver al inicio</a>
+  </div>
+
+  <!-- MODAL PARA VER DETALLES -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <div id="contenido-modal">
+        <!-- El contenido se cargará dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Datos de cada proyecto
+    const proyectos = {
+      1: {
+        titulo: "Sistema de Control PLC",
+        tipo: "TIA Portal - S7-1500",
+        descripcion: "Programación completa de PLC Siemens S7-1500 para control de procesos industriales. Implementación de lógica Ladder y SCL con gestión de alarmas y recetas.",
+        imagen: "../imagenes/proyecto1.jpg",
+        video: "" // Puedes añadir ruta de video si lo deseas
+      },
+      2: {
+        titulo: "Supervisión SCADA",
+        tipo: "WinCC - HMI",
+        descripcion: "Desarrollo de interfaz SCADA con WinCC para supervisión y control de planta. Incluye pantallas de proceso, tendencias históricas y sistema de alarmas.",
+        imagen: "../imagenes/proyecto2.jpg",
+        video: ""
+      },
+      3: {
+        titulo: "Automatización Industrial",
+        tipo: "TIA Portal - Ladder",
+        descripcion: "Automatización completa de línea de producción. Programación en Ladder con integración de sensores y actuadores.",
+        imagen: "../imagenes/proyecto3.jpg",
+        video: ""
+      },
+      4: {
+        titulo: "Monitoreo en Tiempo Real",
+        tipo: "SCADA - OPC-DA",
+        descripcion: "Sistema de monitoreo en tiempo real con comunicación OPC-DA. Visualización de variables de proceso y registro de datos históricos.",
+        imagen: "../imagenes/proyecto4.jpg",
+        video: ""
+      },
+      5: {
+        titulo: "Sistema de Mezclado",
+        tipo: "TIA Portal - SCL",
+        descripcion: "Control avanzado de proceso de mezclado con programación en SCL. Gestión de recetas y control de dosificación automática.",
+        imagen: "../imagenes/proyecto5.jpg",
+        video: ""
+      },
+      6: {
+        titulo: "Integración Completa",
+        tipo: "TIA Portal + SCADA",
+        descripcion: "Proyecto integral de automatización con PLC y SCADA. Comunicación bidireccional, control distribuido y supervisión centralizada.",
+        imagen: "../imagenes/proyecto6.jpg",
+        video: ""
+      }
+    };
+
+    function abrirModal(id) {
+      const proyecto = proyectos[id];
+      const contenido = `
+        <h2>${proyecto.titulo}</h2>
+        <p class="tipo-modal">${proyecto.tipo}</p>
+        <img src="${proyecto.imagen}" alt="${proyecto.titulo}" class="imagen-modal" />
+        <p class="descripcion-modal">${proyecto.descripcion}</p>
+        ${proyecto.video ? `<video controls class="video-modal"><source src="${proyecto.video}" type="video/mp4"></video>` : ''}
+      `;
+      document.getElementById('contenido-modal').innerHTML = contenido;
+      document.getElementById('modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function cerrarModal() {
+      document.getElementById('modal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        cerrarModal();
+      }
+    }
+  </script>
+</body>
+</html>
