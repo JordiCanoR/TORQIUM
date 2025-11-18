@@ -9,17 +9,16 @@ body {
   background-image: url("../imagenes/fondometal.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh; /* CAMBIA min-height POR height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0; /* ELIMINA padding que empuja contenido */
+  padding: 40px 0 0;
   margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
 
 .grid-servicios {
   display: grid;
@@ -50,17 +49,18 @@ body {
 
 /* RAYO VERTICAL ADAPTADO A TODAS LAS PANTALLAS */
 .rayo {
-  position: absolute;
-  top: 28px;              /* margen superior exacto para no tocar la línea */
-  bottom: 28px;           /* margen inferior exacto también */
+  position: fixed;
+  top: 0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: calc(100% - 56px); /* alto total menos los márgenes */
+  height: 100vh;
   opacity: 0;
   animation: parpadeo 2.8s ease-in-out infinite;
   z-index: 1;
   filter: drop-shadow(0 0 45px #FFD700) brightness(1.6);
+  pointer-events: none;
 }
 
 @keyframes parpadeo {
@@ -72,10 +72,85 @@ body {
   100% { opacity: 0; }
 }
 
+/* ───────────── SECCIÓN NUESTRA FLOTA Y EQUIPO ───────────── */
+.seccion-extra {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 20, 40, 0.85) 100%);
+  padding: 60px 20px;
+  margin-top: 40px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  border-top: 3px solid #ffc107;
+}
+
+.seccion-extra h2 {
+  font-size: 2.5rem;
+  color: #ffc107;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+}
+
+/* Grid para mostrar las dos imágenes */
+.grid-equipo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contenedor-imagen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.contenedor-imagen:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4);
+}
+
+.imagen-extra {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.contenedor-imagen:hover .imagen-extra {
+  transform: scale(1.05);
+}
+
+/* Etiqueta sobre cada imagen */
+.etiqueta-imagen {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #003399, #0052cc);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 51, 153, 0.4);
+  z-index: 1;
+}
 
 /* Botón volver */
 .volver {
   margin-top: 40px;
+  margin-bottom: 40px;
   background-color: #003399;
   color: white;
   padding: 12px 28px;
@@ -85,27 +160,24 @@ body {
   font-size: 16px;
   transition: background-color 0.3s ease;
   z-index: 3;
+  display: inline-block;
 }
 
 .volver:hover {
   background-color: #001f66;
 }
+
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-servicios {
-    height: auto;               /* Se adapta al contenido */
-    min-height: 100vh;          /* Siempre al menos pantalla completa */
-    padding: 20px 0 80px;       /* Espacio inferior para el botón */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ya no centrado vertical */
-    align-items: center;
+    min-height: auto;
+    padding: 20px 0;
   }
 
   .grid-servicios {
     grid-template-columns: 1fr;
     gap: 30px;
-    padding: 0;
+    padding: 20px 0;
   }
 
   .boton-servicio img {
@@ -113,34 +185,40 @@ body {
   }
 
   .rayo {
-    position: absolute;
-    top: 28px;
-    bottom: 28px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;                   /* Tamaño más pequeño para móviles */
-    height: calc(100% - 56px);      /* Se mantiene desde línea a línea */
-    z-index: 1;
+    width: 120px;
+  }
+
+  .seccion-extra {
+    padding: 40px 15px;
+    margin-top: 30px;
+  }
+
+  .seccion-extra h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .grid-equipo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contenedor-imagen {
+    padding: 15px;
+  }
+
+  .etiqueta-imagen {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    top: 25px;
   }
 
   .volver {
-    display: block;
-    margin: 40px auto 0;
     font-size: 14px;
     padding: 10px 22px;
-    background-color: #003399;
-    border-radius: 8px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    z-index: 3;
-  }
-
-  .volver:hover {
-    background-color: #001f66;
+    margin: 30px auto 30px;
   }
 }
-
 
 /* ───────────── RESPONSIVE: TABLETS ───────────── */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -156,36 +234,17 @@ body {
   .rayo {
     width: 180px;
   }
-}
 
-/* NUEVAS SECCIONES: Flota y Equipo */
-.seccion-extra {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  z-index: 2;
-}
-
-.seccion-extra h2 {
-  font-size: 28px;
-  color: #ffc107;
-  margin-bottom: 20px;
-}
-
-.imagen-extra {
-  max-width: 90%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-}
-
-/* RESPONSIVE para imagen extra */
-@media screen and (max-width: 767px) {
   .seccion-extra h2 {
-    font-size: 22px;
+    font-size: 2rem;
   }
 
-  .imagen-extra {
-    max-width: 95%;
+  .grid-equipo {
+    gap: 30px;
+    max-width: 900px;
+  }
+
+  .etiqueta-imagen {
+    font-size: 0.95rem;
   }
 }
