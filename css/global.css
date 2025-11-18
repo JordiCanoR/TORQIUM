@@ -38,6 +38,8 @@ body {
 .skip-intro {
   position: absolute;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #003cff;
   color: white;
   border: none;
@@ -49,10 +51,14 @@ body {
   box-shadow: 0 4px 12px rgba(0, 60, 255, 0.4);
   transition: all 0.2s ease;
   z-index: 11;
+  /* Asegurar visibilidad en móviles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .skip-intro:hover {
-  transform: scale(1.05);
+  transform: translateX(-50%) scale(1.05);
   background: #0052ff;
   box-shadow: 0 6px 18px rgba(0, 60, 255, 0.6);
 }
@@ -164,9 +170,23 @@ body {
     max-height: 85vh;
   }
 
+  /* BOTÓN SKIP-INTRO MEJORADO PARA MÓVILES */
   .skip-intro {
-    font-size: 14px;
-    padding: 10px 22px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    padding: 14px 32px;
+    min-width: 150px;
+    background: #003cff;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 60, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .skip-intro:active {
+    transform: translateX(-50%) scale(0.95);
+    background: #0052ff;
   }
 }
 
@@ -189,6 +209,12 @@ body {
   .skip-intro {
     font-size: 15px;
     padding: 11px 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skip-intro:hover {
+    transform: translateX(-50%) scale(1.05);
   }
 
   .volver {
@@ -212,6 +238,15 @@ body {
   .volver {
     font-size: 15px;
     padding: 12px 28px;
+  }
+
+  .skip-intro {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skip-intro:hover {
+    transform: translateX(-50%) scale(1.05);
   }
 }
 
