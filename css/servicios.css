@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px 0 0;
+  padding: 40px 20px;
   margin: 0;
   position: relative;
   overflow-x: hidden;
@@ -75,13 +75,16 @@ body {
 /* ───────────── SECCIÓN NUESTRA FLOTA Y EQUIPO ───────────── */
 .seccion-extra {
   width: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 20, 40, 0.85) 100%);
-  padding: 60px 20px;
-  margin-top: 40px;
+  max-width: 1200px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 30, 60, 0.9) 100%);
+  padding: 60px 40px;
+  margin-top: 60px;
   text-align: center;
   z-index: 2;
   position: relative;
-  border-top: 3px solid #ffc107;
+  border-radius: 15px;
+  border: 2px solid #ffc107;
+  box-shadow: 0 10px 40px rgba(255, 193, 7, 0.3);
 }
 
 .seccion-extra h2 {
@@ -90,8 +93,8 @@ body {
   font-weight: 700;
   margin-bottom: 50px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(255, 193, 7, 0.6);
 }
 
 /* Grid para mostrar las dos imágenes */
@@ -99,7 +102,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   align-items: center;
 }
@@ -108,15 +111,17 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   transition: all 0.4s ease;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
+  border: 2px solid transparent;
 }
 
 .contenedor-imagen:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.5);
+  border-color: #ffc107;
 }
 
 .imagen-extra {
@@ -134,44 +139,48 @@ body {
 /* Etiqueta sobre cada imagen */
 .etiqueta-imagen {
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #003399, #0052cc);
+  background: linear-gradient(135deg, #003399, #0066ff);
   color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
   font-weight: 600;
-  font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 51, 153, 0.4);
-  z-index: 1;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 20px rgba(0, 51, 153, 0.6);
+  z-index: 3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Botón volver */
 .volver {
-  margin-top: 40px;
+  margin-top: 50px;
   margin-bottom: 40px;
   background-color: #003399;
   color: white;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 14px 35px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 3;
   display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 51, 153, 0.4);
 }
 
 .volver:hover {
   background-color: #001f66;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 51, 153, 0.6);
 }
 
 /* ───────────── RESPONSIVE: SMARTPHONES ───────────── */
 @media screen and (max-width: 767px) {
   .pantalla-servicios {
-    min-height: auto;
-    padding: 20px 0;
+    padding: 20px 15px 80px;
   }
 
   .grid-servicios {
@@ -189,13 +198,15 @@ body {
   }
 
   .seccion-extra {
-    padding: 40px 15px;
-    margin-top: 30px;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 10px;
   }
 
   .seccion-extra h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 30px;
+    letter-spacing: 1px;
   }
 
   .grid-equipo {
@@ -209,13 +220,13 @@ body {
 
   .etiqueta-imagen {
     font-size: 0.9rem;
-    padding: 8px 20px;
+    padding: 10px 20px;
     top: 25px;
   }
 
   .volver {
     font-size: 14px;
-    padding: 10px 22px;
+    padding: 12px 25px;
     margin: 30px auto 30px;
   }
 }
@@ -228,15 +239,20 @@ body {
   }
 
   .boton-servicio img {
-    max-width: 300px;
+    max-width: 320px;
   }
 
   .rayo {
     width: 180px;
   }
 
+  .seccion-extra {
+    padding: 50px 30px;
+  }
+
   .seccion-extra h2 {
     font-size: 2rem;
+    letter-spacing: 2px;
   }
 
   .grid-equipo {
@@ -245,6 +261,18 @@ body {
   }
 
   .etiqueta-imagen {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* ───────────── RESPONSIVE: PC GRANDES ───────────── */
+@media screen and (min-width: 1024px) {
+  .boton-servicio img {
+    max-width: 380px;
+  }
+
+  .rayo {
+    width: 200px;
   }
 }
